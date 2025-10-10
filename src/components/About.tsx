@@ -1,11 +1,13 @@
 import { Check } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const About = () => {
+  const { t } = useLanguage();
   const stats = [
-    { value: "6", label: "Μέρες την εβδομάδα" },
-    { value: "24", label: "Ωρες την μέρα Διαθέσιμοι" },
-    { value: "500+", label: "Επισκέψεις σε Πισίνες κάθε Σεζόν" },
-    { value: "100%", label: "Επαγγελματισμός" },
+    { value: "6", label: t.about.stats.days },
+    { value: "24", label: t.about.stats.hours },
+    { value: "500+", label: t.about.stats.visits },
+    { value: "100%", label: t.about.stats.professionalism },
   ];
 
   return (
@@ -15,26 +17,17 @@ const About = () => {
           {/* Text Content */}
           <div className="animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-              ΠΟΙΟΙ ΕΙΜΑΣΤΕ
+              {t.about.title}
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Η <strong className="text-primary">Clean Pool Kefalonia</strong> είναι μια εξειδικευμένη επιχείρηση 
-              συντήρησης και καθαρισμού πισίνας με πολυετή εμπειρία στην Κεφαλονιά. Παρέχουμε επαγγελματικές 
-              υπηρεσίες σε ιδιωτικές κατοικίες, τουριστικές βίλες και ξενοδοχειακά καταλύματα σε όλο το νησί.
+              {t.about.description1}
             </p>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Αναλαμβάνουμε υπεύθυνα τη συνολική φροντίδα της πισίνας σας – από τον τακτικό καθαρισμό και την 
-              ρύθμιση των χημικών, μέχρι τον έλεγχο εξοπλισμού και την αντιμετώπιση ειδικών προβλημάτων όπως 
-              άλγες ή θολό νερό.
+              {t.about.description2}
             </p>
             
             <div className="space-y-3">
-              {[
-                "Πιστοποιημένοι επαγγελματίες",
-                "Σύγχρονος εξοπλισμός",
-                "Προσιτές τιμές",
-                "Άμεση εξυπηρέτηση"
-              ].map((item, index) => (
+              {[t.about.certified, t.about.modern, t.about.affordable, t.about.service].map((item, index) => (
                 <div key={index} className="flex items-center gap-3">
                   <div className="bg-secondary text-secondary-foreground rounded-full p-1">
                     <Check className="h-4 w-4" />

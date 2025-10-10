@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import heroImage from "@/assets/hero-pool.jpg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
+  const { t } = useLanguage();
+  
   const scrollToContact = () => {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -20,13 +23,13 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-32 text-center">
         <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 animate-fade-in">
-          ΣΥΝΤΗΡΗΣΗ ΚΑΙ ΚΑΘΑΡΙΣΜΟΣ ΠΙΣΙΝΑΣ
+          {t.hero.title}
           <br />
-          <span className="text-accent">ΣΤΗΝ ΚΕΦΑΛΟΝΙΑ</span>
+          <span className="text-accent">{t.hero.subtitle}</span>
         </h1>
         
         <p className="text-xl md:text-2xl text-primary-foreground/90 mb-10 max-w-3xl mx-auto animate-fade-in-up">
-          Προσφέρουμε επαγγελματικές υπηρεσίες καθαρισμού και συντήρησης πισίνας σε βίλες και κατοικίες
+          {t.hero.description}
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-scale-in">
@@ -35,7 +38,7 @@ const Hero = () => {
             size="lg"
             onClick={scrollToContact}
           >
-            ΖΗΤΗΣΤΕ ΠΡΟΣΦΟΡΑ
+            {t.hero.requestQuote}
           </Button>
           
           <Button 
@@ -45,7 +48,7 @@ const Hero = () => {
           >
             <a href="tel:6987404210" className="flex items-center gap-2">
               <Phone className="h-5 w-5" />
-              698 740 4210
+              {t.hero.phone}
             </a>
           </Button>
         </div>

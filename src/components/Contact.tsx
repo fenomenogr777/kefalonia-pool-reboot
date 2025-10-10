@@ -5,8 +5,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { Phone, Mail, Facebook, Instagram } from "lucide-react";
 import { toast } from "sonner";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -16,8 +18,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to a backend
-    toast.success("Το μήνυμά σας στάλθηκε επιτυχώς! Θα επικοινωνήσουμε σύντομα μαζί σας.");
+    toast.success(t.contact.form.success);
     setFormData({ name: "", phone: "", email: "", message: "" });
   };
 
@@ -33,10 +34,10 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
-            ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΑΖΙ ΜΑΣ
+            {t.contact.title}
           </h2>
           <p className="text-xl text-muted-foreground">
-            Είμαστε εδώ για να σας εξυπηρετήσουμε
+            {t.contact.subtitle}
           </p>
         </div>
 
@@ -49,7 +50,7 @@ const Contact = () => {
                   <Phone className="h-6 w-6 text-primary-foreground" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Τηλέφωνο</h3>
+                  <h3 className="font-semibold text-foreground mb-1">{t.contact.phone}</h3>
                   <a 
                     href="tel:6987404210" 
                     className="text-secondary hover:text-secondary/80 transition-colors text-lg"
@@ -66,7 +67,7 @@ const Contact = () => {
                   <Mail className="h-6 w-6 text-primary-foreground" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Email</h3>
+                  <h3 className="font-semibold text-foreground mb-1">{t.contact.email}</h3>
                   <a 
                     href="mailto:info@cleanpoolkefalonia.gr" 
                     className="text-secondary hover:text-secondary/80 transition-colors"
@@ -78,7 +79,7 @@ const Contact = () => {
             </Card>
 
             <div className="pt-6">
-              <h3 className="font-semibold text-foreground mb-4">Ακολουθήστε μας</h3>
+              <h3 className="font-semibold text-foreground mb-4">{t.contact.followUs}</h3>
               <div className="flex gap-4">
                 <a 
                   href="https://www.facebook.com/cleanpoolkefalonia"
@@ -115,7 +116,7 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                  Όνομα *
+                  {t.contact.form.name} *
                 </label>
                 <Input
                   id="name"
@@ -123,13 +124,13 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  placeholder="Το όνομά σας"
+                  placeholder={t.contact.form.namePlaceholder}
                 />
               </div>
 
               <div>
                 <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
-                  Κινητό *
+                  {t.contact.form.phone} *
                 </label>
                 <Input
                   id="phone"
@@ -138,13 +139,13 @@ const Contact = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   required
-                  placeholder="Το τηλέφωνό σας"
+                  placeholder={t.contact.form.phonePlaceholder}
                 />
               </div>
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                  E-mail *
+                  {t.contact.form.email} *
                 </label>
                 <Input
                   id="email"
@@ -153,13 +154,13 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  placeholder="email@example.com"
+                  placeholder={t.contact.form.emailPlaceholder}
                 />
               </div>
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                  Μήνυμα *
+                  {t.contact.form.message} *
                 </label>
                 <Textarea
                   id="message"
@@ -168,12 +169,12 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  placeholder="Πείτε μας πώς μπορούμε να σας βοηθήσουμε..."
+                  placeholder={t.contact.form.messagePlaceholder}
                 />
               </div>
 
               <Button type="submit" variant="hero" size="lg" className="w-full">
-                ΑΠΟΣΤΟΛΗ ΜΗΝΥΜΑΤΟΣ
+                {t.contact.form.submit}
               </Button>
             </form>
           </Card>

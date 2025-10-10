@@ -1,8 +1,16 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Navigation = () => {
+  const { language, setLanguage, t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -15,11 +23,11 @@ const Navigation = () => {
   }, []);
 
   const navLinks = [
-    { label: 'ΑΡΧΙΚΗ', href: '#home' },
-    { label: 'ΠΟΙΟΙ ΕΙΜΑΣΤΕ', href: '#about' },
-    { label: 'ΥΠΗΡΕΣΙΕΣ', href: '#services' },
-    { label: 'ΦΩΤΟΓΡΑΦΙΕΣ', href: '#gallery' },
-    { label: 'ΕΠΙΚΟΙΝΩΝΙΑ', href: '#contact' },
+    { label: t.nav.home, href: '#home' },
+    { label: t.nav.about, href: '#about' },
+    { label: t.nav.services, href: '#services' },
+    { label: t.nav.gallery, href: '#gallery' },
+    { label: t.nav.contact, href: '#contact' },
   ];
 
   const scrollToSection = (href: string) => {
@@ -49,7 +57,7 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <button
                 key={link.href}
@@ -61,21 +69,77 @@ const Navigation = () => {
                 {link.label}
               </button>
             ))}
+            
+            {/* Language Switcher */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button 
+                  variant="ghost" 
+                  size="sm"
+                  className={`gap-2 ${isScrolled ? 'text-foreground hover:text-secondary' : 'text-primary-foreground hover:text-accent'}`}
+                >
+                  <Globe className="h-4 w-4" />
+                  {language.toUpperCase()}
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="bg-background border-border z-[100]">
+                <DropdownMenuItem 
+                  onClick={() => setLanguage("el")}
+                  className={`cursor-pointer ${language === "el" ? "bg-muted" : ""}`}
+                >
+                  🇬🇷 Ελληνικά
+                </DropdownMenuItem>
+                <DropdownMenuItem 
+                  onClick={() => setLanguage("en")}
+                  className={`cursor-pointer ${language === "en" ? "bg-muted" : ""}`}
+                >
+                  🇬🇧 English
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
 
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? (
-              <X className={isScrolled ? 'text-foreground' : 'text-primary-foreground'} />
-            ) : (
-              <Menu className={isScrolled ? 'text-foreground' : 'text-primary-foreground'} />
-            )}
-          </Button>
+          {/* Mobile Menu Button & Language */}
+          <div className="md:hidden flex items-center gap-2">
+            {/* Mobile Language Switcher */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button 
+                  variant="ghost" 
+                  size="icon"
+                  className={isScrolled ? 'text-foreground' : 'text-primary-foreground'}
+                >
+                  <Globe className="h-5 w-5" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="bg-background border-border z-[100]">
+                <DropdownMenuItem 
+                  onClick={() => setLanguage("el")}
+                  className={`cursor-pointer ${language === "el" ? "bg-muted" : ""}`}
+                >
+                  🇬🇷 Ελληνικά
+                </DropdownMenuItem>
+                <DropdownMenuItem 
+                  onClick={() => setLanguage("en")}
+                  className={`cursor-pointer ${language === "en" ? "bg-muted" : ""}`}
+                >
+                  🇬🇧 English
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? (
+                <X className={isScrolled ? 'text-foreground' : 'text-primary-foreground'} />
+              ) : (
+                <Menu className={isScrolled ? 'text-foreground' : 'text-primary-foreground'} />
+              )}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Menu */}

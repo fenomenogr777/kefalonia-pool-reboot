@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { ZoomIn } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Gallery = () => {
+  const { t } = useLanguage();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const images = [
@@ -21,10 +23,10 @@ const Gallery = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
-            ΦΩΤΟΓΡΑΦΙΕΣ
+            {t.gallery.title}
           </h2>
           <p className="text-xl text-muted-foreground">
-            Μερικά από τα έργα μας
+            {t.gallery.subtitle}
           </p>
         </div>
 
