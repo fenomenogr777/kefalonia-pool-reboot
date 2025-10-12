@@ -39,7 +39,7 @@ const Services = () => {
                 <div className="bg-gradient-ocean rounded-lg w-14 h-14 flex items-center justify-center mb-4 shadow-soft">
                   <Icon className="h-7 w-7 text-primary-foreground" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-3">
+                <h3 className="text-xl font-medium text-foreground mb-3 tracking-wide">
                   {service.title}
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">

@@ -34,19 +34,19 @@ export const translations = {
       subtitle: "Complete maintenance solutions for your pool",
       list: [
         {
-          title: "Summer Season",
+          title: "Summer season",
           description: "We undertake the maintenance of your villa pool during the summer season, ensuring clean and safe water."
         },
         {
-          title: "Pool Opening",
+          title: "Pool opening",
           description: "Pool opening is a process that requires professional care to ensure hygienic and safe use."
         },
         {
-          title: "Pool Closing",
+          title: "Pool closing",
           description: "Proper closing of your pool at the end of the swimming season is essential to keep it in excellent condition during winter."
         },
         {
-          title: "Chemical Testing",
+          title: "Chemical testing",
           description: "Maintaining proper water chemical balance is critical for the safety and hygiene of your pool and its users."
         },
         {
@@ -54,15 +54,15 @@ export const translations = {
           description: "The cleanliness of your pool is vital for the hygiene and enjoyment of users."
         },
         {
-          title: "Equipment Maintenance",
+          title: "Equipment maintenance",
           description: "Pool equipment maintenance is essential for smooth and efficient operation."
         },
         {
-          title: "Chemical Supply",
+          title: "Chemical supply",
           description: "We handle the complete supply of chemical products for your pool, ensuring you won't need to worry about purchasing them."
         },
         {
-          title: "Emergency Service",
+          title: "Emergency service",
           description: "We respond immediately to emergencies, restoring your pool to its ideal condition."
         }
       ]
@@ -135,35 +135,35 @@ export const translations = {
       subtitle: "Ολοκληρωμένες λύσεις συντήρησης για την πισίνα σας",
       list: [
         {
-          title: "Καλοκαιρινη ΠΕΡΙΟΔΟΣ",
+          title: "Καλοκαιρινή περίοδος",
           description: "Αναλαμβάνουμε τη συντήρηση της πισίνας της βίλας σας κατά την καλοκαιρινή περίοδο, διασφαλίζοντας καθαρό και ασφαλές νερό."
         },
         {
-          title: "Ανοιγμα Πισινας",
+          title: "Άνοιγμα πισίνας",
           description: "Το άνοιγμα μιας πισίνας είναι μια διαδικασία που απαιτεί επαγγελματική φροντίδα για να διασφαλιστεί η υγιεινή και ασφαλής χρήση της."
         },
         {
-          title: "Κλεισιμο Πισινας",
+          title: "Κλείσιμο πισίνας",
           description: "Το σωστό κλείσιμο της πισίνας σας στο τέλος της κολυμβητικής περιόδου είναι απαραίτητο για να διατηρηθεί σε άριστη κατάσταση."
         },
         {
-          title: "Ελεγχος χημικων",
+          title: "Έλεγχος χημικών",
           description: "Η διατήρηση της σωστής χημικής ισορροπίας του νερού είναι κρίσιμη για την ασφάλεια και την υγιεινή της πισίνας σας."
         },
         {
-          title: "Καθαρισμος",
+          title: "Καθαρισμός",
           description: "Η καθαριότητα της πισίνας σας είναι ζωτικής σημασίας για την υγιεινή και την ευχαρίστηση των χρηστών."
         },
         {
-          title: "Συντηρηση Εξοπλισμου",
+          title: "Συντήρηση εξοπλισμού",
           description: "Η συντήρηση του εξοπλισμού της πισίνας είναι απαραίτητη για την ομαλή και αποδοτική λειτουργία της."
         },
         {
-          title: "ΠΑΡΟΧΗ ΧΗΜΙΚΩΝ",
+          title: "Παροχή χημικών",
           description: "Αναλαμβάνουμε την πλήρη παροχή χημικών προϊόντων για την πισίνα σας, εξασφαλίζοντας ότι δεν θα χρειαστεί να ανησυχείτε."
         },
         {
-          title: "ΕΚΤΑΚΤΗ ΣΥΝΤΗΡΗΣΗ",
+          title: "Έκτακτη συντήρηση",
           description: "Ανταποκρινόμαστε άμεσα σε περιπτώσεις έκτακτης ανάγκης, επαναφέροντας την πισίνα σας στην ιδανική της κατάσταση."
         }
       ]

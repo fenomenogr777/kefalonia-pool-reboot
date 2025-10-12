@@ -17,7 +17,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">{t.footer.contactTitle}</h3>
             <div className="space-y-2 text-sm text-primary-foreground/80">
               <p>{t.footer.phone}: 698 740 4210</p>
-              <p>Email: info@cleanpoolkefalonia.gr</p>
+              <p>Email: cleanpoolkefalonia@gmail.com</p>
             </div>
           </div>
 
