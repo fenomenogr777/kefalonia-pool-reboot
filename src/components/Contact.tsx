@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Phone, Mail, Facebook, Instagram } from "lucide-react";
 import { toast } from "sonner";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const { t } = useLanguage();
@@ -16,10 +17,22 @@ const Contact = () => {
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success(t.contact.form.success);
-    setFormData({ name: "", phone: "", email: "", message: "" });
+    
+    try {
+      const { error } = await supabase.functions.invoke('send-contact-email', {
+        body: formData
+      });
+
+      if (error) throw error;
+
+      toast.success(t.contact.form.success);
+      setFormData({ name: "", phone: "", email: "", message: "" });
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast.error("Υπήρξε ένα πρόβλημα. Παρακαλώ δοκιμάστε ξανά.");
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
