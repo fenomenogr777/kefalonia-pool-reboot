@@ -2,20 +2,28 @@ import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { ZoomIn } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import gallery1 from "@/assets/gallery-1.jpg";
+import gallery2 from "@/assets/gallery-2.jpg";
+import gallery3 from "@/assets/gallery-3.jpg";
+import gallery4 from "@/assets/gallery-4.jpg";
+import gallery5 from "@/assets/gallery-5.jpg";
+import gallery6 from "@/assets/gallery-6.jpg";
+import gallery7 from "@/assets/gallery-7.jpg";
+import gallery8 from "@/assets/gallery-8.jpg";
 
 const Gallery = () => {
   const { t } = useLanguage();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const images = [
-    { src: "https://cleanpoolkefalonia.gr/images/page-1_img05.jpg", alt: "Pool and villa" },
-    { src: "https://cleanpoolkefalonia.gr/images/page-1_img11.jpg", alt: "Front page pool" },
-    { src: "https://cleanpoolkefalonia.gr/images/page-1_img06.jpg", alt: "Pool and villa" },
-    { src: "https://cleanpoolkefalonia.gr/images/page-1_img15.jpg", alt: "Girl sitting on pool" },
-    { src: "https://cleanpoolkefalonia.gr/images/page-1_img16.jpg", alt: "Pool" },
-    { src: "https://cleanpoolkefalonia.gr/images/page-1_img22.jpg", alt: "Clear pool" },
-    { src: "https://cleanpoolkefalonia.gr/images/page-1_img07.jpg", alt: "Fancy pool" },
-    { src: "https://cleanpoolkefalonia.gr/images/page-1_img12.jpg", alt: "Big pool" },
+    { src: gallery1, alt: "Πολυτελής πισίνα με θέα" },
+    { src: gallery2, alt: "Κρυστάλλινο νερό πισίνας" },
+    { src: gallery3, alt: "Πισίνα με θέα θάλασσα" },
+    { src: gallery4, alt: "Infinity pool Κεφαλονιά" },
+    { src: gallery5, alt: "Μοντέρνα πισίνα" },
+    { src: gallery6, alt: "Καθαρή πισίνα με βίλα" },
+    { src: gallery7, alt: "Κομψή πισίνα" },
+    { src: gallery8, alt: "Πισίνα με ελιές" },
   ];
 
   return (
