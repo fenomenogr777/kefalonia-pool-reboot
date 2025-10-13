@@ -35,7 +35,7 @@ const handler = async (req: Request): Promise<Response> => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'Clean Pool Kefalonia <onboarding@resend.dev>',
+        from: 'Clean Pool Kefalonia <info@cleanpoolkefalonia.gr>',
         to: ['cleanpoolkefalonia@gmail.com'],
         subject: `Νέο μήνυμα επικοινωνίας από ${name}`,
         html: `
