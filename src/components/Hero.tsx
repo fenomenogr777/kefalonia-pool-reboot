@@ -52,9 +52,13 @@ const Hero = () => {
             variant="hero" 
             size="lg"
             onClick={scrollToContact}
-            className="min-w-[220px] h-16 text-lg font-bold shadow-[0_15px_50px_-10px_rgba(74,222,255,0.5)] hover:shadow-[0_20px_60px_-10px_rgba(74,222,255,0.6)] hover:scale-105 transition-all duration-300"
+            className="min-w-[240px] h-[70px] text-xl font-extrabold bg-gradient-to-r from-accent via-accent-light to-accent shadow-[0_20px_60px_-10px_rgba(74,222,255,0.7),0_0_80px_-20px_rgba(74,222,255,0.5)] hover:shadow-[0_25px_70px_-10px_rgba(74,222,255,0.9),0_0_100px_-20px_rgba(74,222,255,0.7)] hover:scale-110 transition-all duration-300 border-2 border-white/30 relative overflow-hidden group"
           >
-            {t.hero.requestQuote}
+            <span className="relative z-10 flex items-center gap-2">
+              {t.hero.requestQuote}
+              <span className="text-2xl group-hover:translate-x-1 transition-transform">→</span>
+            </span>
+            <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
           </Button>
           
           <Button 
@@ -74,11 +78,11 @@ const Hero = () => {
         <div className="flex flex-wrap justify-center gap-10 text-white/80 text-base font-semibold animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
           <div className="flex items-center gap-3">
             <div className="w-2 h-2 bg-accent rounded-full shadow-[0_0_10px_rgba(74,222,255,0.8)]" />
-            <span>15+ Years Experience</span>
+            <span>8+ Years Experience</span>
           </div>
           <div className="flex items-center gap-3">
             <div className="w-2 h-2 bg-accent rounded-full shadow-[0_0_10px_rgba(74,222,255,0.8)]" />
-            <span>500+ Happy Clients</span>
+            <span>100+ Happy Clients</span>
           </div>
           <div className="flex items-center gap-3">
             <div className="w-2 h-2 bg-accent rounded-full shadow-[0_0_10px_rgba(74,222,255,0.8)]" />
