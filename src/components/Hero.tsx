@@ -76,15 +76,15 @@ const Hero = () => {
         <div className="flex flex-wrap justify-center gap-8 text-white/70 text-sm font-medium animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
           <div className="flex items-center gap-2">
             <div className="w-1.5 h-1.5 bg-accent rounded-full" />
-            <span>8+ Years Experience</span>
+            <span>6+ Χρόνια Εμπειρίας</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-1.5 h-1.5 bg-accent rounded-full" />
-            <span>100+ Happy Clients</span>
+            <span>100+ Ευχαριστημένοι Πελάτες</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-1.5 h-1.5 bg-accent rounded-full" />
-            <span>Professional Service</span>
+            <span>Επαγγελματική Εξυπηρέτηση</span>
           </div>
         </div>
       </div>
