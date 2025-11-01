@@ -80,7 +80,7 @@ const Hero = () => {
           </div>
           <div className="flex items-center gap-2">
             <div className="w-1.5 h-1.5 bg-accent rounded-full" />
-            <span>100+ Ευχαριστημένοι Πελάτες</span>
+            <span>50+ Ευχαριστημένοι Πελάτες</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-1.5 h-1.5 bg-accent rounded-full" />
