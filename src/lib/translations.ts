@@ -12,7 +12,12 @@ export const translations = {
       subtitle: "IN KEFALONIA",
       description: "We offer professional pool cleaning and maintenance services for villas and residences",
       requestQuote: "REQUEST A QUOTE",
-      phone: "698 740 4210"
+      phone: "698 740 4210",
+      trustIndicators: {
+        experience: "6+ Years Experience",
+        clients: "50+ Happy Clients",
+        service: "Professional Service"
+      }
     },
     about: {
       title: "WHO WE ARE",
@@ -113,7 +118,12 @@ export const translations = {
       subtitle: "ΣΤΗΝ ΚΕΦΑΛΟΝΙΑ",
       description: "Προσφέρουμε επαγγελματικές υπηρεσίες καθαρισμού και συντήρησης πισίνας σε βίλες και κατοικίες",
       requestQuote: "ΖΗΤΗΣΤΕ ΠΡΟΣΦΟΡΑ",
-      phone: "698 740 4210"
+      phone: "698 740 4210",
+      trustIndicators: {
+        experience: "6+ Χρόνια Εμπειρίας",
+        clients: "50+ Ευχαριστημένοι Πελάτες",
+        service: "Επαγγελματική Εξυπηρέτηση"
+      }
     },
     about: {
       title: "ΠΟΙΟΙ ΕΙΜΑΣΤΕ",
