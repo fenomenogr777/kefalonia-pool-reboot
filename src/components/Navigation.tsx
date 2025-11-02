@@ -47,14 +47,17 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="text-2xl font-bold">
+          <button 
+            onClick={() => scrollToSection('#home')}
+            className="text-2xl font-bold hover:opacity-80 transition-opacity"
+          >
             <span className={`transition-colors ${isScrolled ? 'text-primary' : 'text-primary-foreground'}`}>
               Clean Pool
             </span>
             <span className={`transition-colors ${isScrolled ? 'text-secondary' : 'text-accent'}`}>
               {" "}Kefalonia
             </span>
-          </div>
+          </button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
