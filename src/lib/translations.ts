@@ -40,22 +40,22 @@ export const translations = {
       rating: "5.0",
       reviews: [
         {
-          author: "Maria P.",
+          author: "Nathan Minsberg",
           rating: 5,
-          text: "Excellent service! They keep our villa pool spotless throughout the season. Highly professional and reliable.",
-          date: "2 months ago"
+          text: "Amazing perfect wonderful service, with the nicest kindest person. We really enjoyed our time in the villa and the Pool was super clear and fun to use.",
+          date: "a month ago"
         },
         {
-          author: "John K.",
+          author: "Simon",
           rating: 5,
-          text: "Very satisfied with their work. Always on time and the pool is always crystal clear. Highly recommended!",
-          date: "3 months ago"
+          text: "We have been to many houses and villas around Europe during the last 25 years and I can honestly say that the swimming pool at Villa Atlantis in Kefalonia was the nicest, cleanest and most enjoyable to swim in.",
+          date: "a month ago"
         },
         {
-          author: "Sophia L.",
+          author: "Efie Linardatou",
           rating: 5,
-          text: "Professional team with great attention to detail. Our pool has never looked better!",
-          date: "1 month ago"
+          text: "Impeccable cooperation, wonderful result regarding the cleanliness and maintenance of the pool. Immediate response to needs and of course courtesy and personal interest.",
+          date: "3 weeks ago"
         }
       ]
     },
@@ -171,22 +171,22 @@ export const translations = {
       rating: "5.0",
       reviews: [
         {
-          author: "Μαρία Π.",
+          author: "Nathan Minsberg",
           rating: 5,
-          text: "Εξαιρετική εξυπηρέτηση! Διατηρούν την πισίνα της βίλας μας άψογη όλη τη σεζόν. Πολύ επαγγελματίες και αξιόπιστοι.",
-          date: "πριν 2 μήνες"
-        },
-        {
-          author: "Γιάννης Κ.",
-          rating: 5,
-          text: "Πολύ ικανοποιημένος από τη δουλειά τους. Πάντα στην ώρα τους και η πισίνα πάντα κρυστάλλινη. Τους συστήνω ανεπιφύλακτα!",
-          date: "πριν 3 μήνες"
-        },
-        {
-          author: "Σοφία Λ.",
-          rating: 5,
-          text: "Επαγγελματική ομάδα με μεγάλη προσοχή στη λεπτομέρεια. Η πισίνα μας δεν είχε ποτέ καλύτερη εμφάνιση!",
+          text: "Απίστευτα τέλεια υπηρεσία, με τον πιο ευγενικό άνθρωπο. Απολαύσαμε πολύ τη διαμονή μας στη βίλα και η πισίνα ήταν πεντακάθαρη και διασκεδαστική.",
           date: "πριν 1 μήνα"
+        },
+        {
+          author: "Simon",
+          rating: 5,
+          text: "Έχουμε επισκεφθεί πολλές βίλες στην Ευρώπη τα τελευταία 25 χρόνια και μπορώ ειλικρινά να πω ότι η πισίνα στη Villa Atlantis ήταν η πιο ωραία, καθαρή και ευχάριστη.",
+          date: "πριν 1 μήνα"
+        },
+        {
+          author: "Ευτυχία Λιναρδάτου",
+          rating: 5,
+          text: "Άψογη συνεργασία, υπέροχο αποτέλεσμα στην καθαριότητα και συντήρηση της πισίνας. Άμεση ανταπόκριση στις ανάγκες και φυσικά ευγένεια και προσωπικό ενδιαφέρον.",
+          date: "πριν 3 εβδομάδες"
         }
       ]
     },
