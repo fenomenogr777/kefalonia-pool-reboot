@@ -34,6 +34,31 @@ export const translations = {
         professionalism: "Professionalism"
       }
     },
+    reviews: {
+      title: "WHAT OUR CLIENTS SAY",
+      businessName: "Clean Pool Kefalonia – Pool Maintenance & Cleaning",
+      rating: "5.0",
+      reviews: [
+        {
+          author: "Maria P.",
+          rating: 5,
+          text: "Excellent service! They keep our villa pool spotless throughout the season. Highly professional and reliable.",
+          date: "2 months ago"
+        },
+        {
+          author: "John K.",
+          rating: 5,
+          text: "Very satisfied with their work. Always on time and the pool is always crystal clear. Highly recommended!",
+          date: "3 months ago"
+        },
+        {
+          author: "Sophia L.",
+          rating: 5,
+          text: "Professional team with great attention to detail. Our pool has never looked better!",
+          date: "1 month ago"
+        }
+      ]
+    },
     services: {
       title: "SERVICES",
       subtitle: "Complete maintenance solutions for your pool",
@@ -139,6 +164,31 @@ export const translations = {
         visits: "Επισκέψεις σε Πισίνες κάθε Σεζόν",
         professionalism: "Επαγγελματισμός"
       }
+    },
+    reviews: {
+      title: "ΤΙ ΛΕΝΕ ΟΙ ΠΕΛΑΤΕΣ ΜΑΣ",
+      businessName: "Clean Pool Kefalonia – Συντήρηση & Καθαρισμός Πισίνας",
+      rating: "5.0",
+      reviews: [
+        {
+          author: "Μαρία Π.",
+          rating: 5,
+          text: "Εξαιρετική εξυπηρέτηση! Διατηρούν την πισίνα της βίλας μας άψογη όλη τη σεζόν. Πολύ επαγγελματίες και αξιόπιστοι.",
+          date: "πριν 2 μήνες"
+        },
+        {
+          author: "Γιάννης Κ.",
+          rating: 5,
+          text: "Πολύ ικανοποιημένος από τη δουλειά τους. Πάντα στην ώρα τους και η πισίνα πάντα κρυστάλλινη. Τους συστήνω ανεπιφύλακτα!",
+          date: "πριν 3 μήνες"
+        },
+        {
+          author: "Σοφία Λ.",
+          rating: 5,
+          text: "Επαγγελματική ομάδα με μεγάλη προσοχή στη λεπτομέρεια. Η πισίνα μας δεν είχε ποτέ καλύτερη εμφάνιση!",
+          date: "πριν 1 μήνα"
+        }
+      ]
     },
     services: {
       title: "ΥΠΗΡΕΣΙΕΣ",
