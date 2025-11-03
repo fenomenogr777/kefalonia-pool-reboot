@@ -1,49 +1,13 @@
 import { Check, Star } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { useEffect, useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
-
-interface Review {
-  author: string;
-  rating: number;
-  text: string;
-  date: string;
-  link: string;
-}
 
 const About = () => {
   const { t } = useLanguage();
-  const [reviews, setReviews] = useState<Review[]>([]);
-  const [rating, setRating] = useState("5.0");
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchReviews = async () => {
-      try {
-        const { data, error } = await supabase.functions.invoke('fetch-google-reviews');
-        
-        if (error) {
-          console.error('Error fetching reviews:', error);
-          // Fallback to static reviews
-          setReviews(t.reviews.reviews);
-          setRating(t.reviews.rating);
-        } else if (data) {
-          setReviews(data.reviews);
-          setRating(data.rating);
-        }
-      } catch (err) {
-        console.error('Error:', err);
-        // Fallback to static reviews
-        setReviews(t.reviews.reviews);
-        setRating(t.reviews.rating);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchReviews();
-  }, [t.reviews]);
+  
+  // Use static reviews from translations
+  const reviews = t.reviews.reviews;
+  const rating = t.reviews.rating;
 
   const stats = [
     { value: "6", label: t.about.stats.days },
@@ -120,41 +84,27 @@ const About = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-4">
-            {isLoading ? (
-              // Loading skeleton
-              [...Array(3)].map((_, index) => (
-                <Card 
-                  key={index}
-                  className="p-4 bg-card/70 backdrop-blur-sm border-border/40 animate-pulse"
-                >
-                  <div className="h-4 bg-muted rounded mb-2 w-24"></div>
-                  <div className="h-12 bg-muted rounded mb-3"></div>
-                  <div className="h-4 bg-muted rounded w-32"></div>
-                </Card>
-              ))
-            ) : (
-              reviews.map((review, index) => (
-                <Card 
-                  key={index}
-                  onClick={() => window.open(review.link, '_blank')}
-                  className="p-4 hover:shadow-medium transition-all duration-300 animate-fade-in-up bg-card/70 backdrop-blur-sm border-border/40 cursor-pointer hover:scale-105"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <div className="flex items-center gap-1 mb-2">
-                    {[...Array(review.rating)].map((_, i) => (
-                      <Star key={i} className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                  <p className="text-xs text-muted-foreground mb-3 leading-relaxed italic">
-                    "{review.text}"
-                  </p>
-                  <div className="flex items-center justify-between text-xs text-muted-foreground pt-2 border-t border-border/20">
-                    <span className="font-medium text-foreground text-xs">{review.author}</span>
-                    <span className="text-xs">{review.date}</span>
-                  </div>
-                </Card>
-              ))
-            )}
+            {reviews.map((review, index) => (
+              <Card 
+                key={index}
+                onClick={() => window.open(review.link, '_blank')}
+                className="p-4 hover:shadow-medium transition-all duration-300 animate-fade-in-up bg-card/70 backdrop-blur-sm border-border/40 cursor-pointer hover:scale-105"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="flex items-center gap-1 mb-2">
+                  {[...Array(review.rating)].map((_, i) => (
+                    <Star key={i} className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-xs text-muted-foreground mb-3 leading-relaxed italic">
+                  "{review.text}"
+                </p>
+                <div className="flex items-center justify-between text-xs text-muted-foreground pt-2 border-t border-border/20">
+                  <span className="font-medium text-foreground text-xs">{review.author}</span>
+                  <span className="text-xs">{review.date}</span>
+                </div>
+              </Card>
+            ))}
           </div>
         </div>
       </div>
