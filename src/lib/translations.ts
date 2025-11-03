@@ -43,19 +43,22 @@ export const translations = {
           author: "Nathan Minsberg",
           rating: 5,
           text: "Amazing perfect wonderful service, with the nicest kindest person. We really enjoyed our time in the villa and the Pool was super clear and fun to use.",
-          date: "a month ago"
+          date: "a month ago",
+          link: "https://g.page/r/CekKyrPJTafEEBM/review"
         },
         {
           author: "Simon",
           rating: 5,
           text: "We have been to many houses and villas around Europe during the last 25 years and I can honestly say that the swimming pool at Villa Atlantis in Kefalonia was the nicest, cleanest and most enjoyable to swim in.",
-          date: "a month ago"
+          date: "a month ago",
+          link: "https://g.page/r/CekKyrPJTafEEBM/review"
         },
         {
           author: "Efie Linardatou",
           rating: 5,
           text: "Impeccable cooperation, wonderful result regarding the cleanliness and maintenance of the pool. Immediate response to needs and of course courtesy and personal interest.",
-          date: "3 weeks ago"
+          date: "3 weeks ago",
+          link: "https://g.page/r/CekKyrPJTafEEBM/review"
         }
       ]
     },
@@ -174,19 +177,22 @@ export const translations = {
           author: "Nathan Minsberg",
           rating: 5,
           text: "Απίστευτα τέλεια υπηρεσία, με τον πιο ευγενικό άνθρωπο. Απολαύσαμε πολύ τη διαμονή μας στη βίλα και η πισίνα ήταν πεντακάθαρη και διασκεδαστική.",
-          date: "πριν 1 μήνα"
+          date: "πριν 1 μήνα",
+          link: "https://g.page/r/CekKyrPJTafEEBM/review"
         },
         {
           author: "Simon",
           rating: 5,
           text: "Έχουμε επισκεφθεί πολλές βίλες στην Ευρώπη τα τελευταία 25 χρόνια και μπορώ ειλικρινά να πω ότι η πισίνα στη Villa Atlantis ήταν η πιο ωραία, καθαρή και ευχάριστη.",
-          date: "πριν 1 μήνα"
+          date: "πριν 1 μήνα",
+          link: "https://g.page/r/CekKyrPJTafEEBM/review"
         },
         {
           author: "Ευτυχία Λιναρδάτου",
           rating: 5,
           text: "Άψογη συνεργασία, υπέροχο αποτέλεσμα στην καθαριότητα και συντήρηση της πισίνας. Άμεση ανταπόκριση στις ανάγκες και φυσικά ευγένεια και προσωπικό ενδιαφέρον.",
-          date: "πριν 3 εβδομάδες"
+          date: "πριν 3 εβδομάδες",
+          link: "https://g.page/r/CekKyrPJTafEEBM/review"
         }
       ]
     },

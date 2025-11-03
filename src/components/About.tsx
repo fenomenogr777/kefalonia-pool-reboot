@@ -82,7 +82,8 @@ const About = () => {
             {t.reviews.reviews.map((review, index) => (
               <Card 
                 key={index}
-                className="p-4 hover:shadow-medium transition-all duration-300 animate-fade-in-up bg-card/70 backdrop-blur-sm border-border/40"
+                onClick={() => window.open(review.link, '_blank')}
+                className="p-4 hover:shadow-medium transition-all duration-300 animate-fade-in-up bg-card/70 backdrop-blur-sm border-border/40 cursor-pointer hover:scale-105"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-center gap-1 mb-2">
