@@ -43,13 +43,21 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-24 bg-gradient-light relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/5 rounded-full border border-primary/10 mb-6">
+            <div className="w-2 h-2 bg-primary rounded-full" />
+            <span className="text-xs font-semibold text-primary uppercase tracking-wider">Επικοινωνήστε</span>
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
             {t.contact.title}
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             {t.contact.subtitle}
           </p>
         </div>
@@ -57,16 +65,16 @@ const Contact = () => {
         <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Information */}
           <div className="space-y-6 animate-fade-in">
-            <Card className="p-6 hover:shadow-medium transition-shadow">
+            <Card className="p-8 hover:shadow-glow transition-all duration-300 border-border/50 hover:border-primary/20 group hover:-translate-y-1">
               <div className="flex items-center gap-4">
-                <div className="bg-gradient-ocean rounded-full p-3">
+                <div className="bg-gradient-ocean rounded-full p-4 shadow-soft group-hover:shadow-medium transition-shadow">
                   <Phone className="h-6 w-6 text-primary-foreground" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">{t.contact.phone}</h3>
+                  <h3 className="font-semibold text-foreground mb-2 text-lg">{t.contact.phone}</h3>
                   <a 
                     href="tel:6987404210" 
-                    className="text-secondary hover:text-secondary/80 transition-colors text-lg"
+                    className="text-secondary hover:text-secondary/80 transition-colors text-xl font-medium"
                   >
                     698 740 4210
                   </a>
@@ -74,16 +82,16 @@ const Contact = () => {
               </div>
             </Card>
 
-            <Card className="p-6 hover:shadow-medium transition-shadow">
+            <Card className="p-8 hover:shadow-glow transition-all duration-300 border-border/50 hover:border-primary/20 group hover:-translate-y-1">
               <div className="flex items-center gap-4">
-                <div className="bg-gradient-ocean rounded-full p-3">
+                <div className="bg-gradient-ocean rounded-full p-4 shadow-soft group-hover:shadow-medium transition-shadow">
                   <Mail className="h-6 w-6 text-primary-foreground" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">{t.contact.email}</h3>
+                  <h3 className="font-semibold text-foreground mb-2 text-lg">{t.contact.email}</h3>
                   <a 
                     href="mailto:cleanpoolkefalonia@gmail.com" 
-                    className="text-secondary hover:text-secondary/80 transition-colors"
+                    className="text-secondary hover:text-secondary/80 transition-colors font-medium"
                   >
                     cleanpoolkefalonia@gmail.com
                   </a>
@@ -92,7 +100,7 @@ const Contact = () => {
             </Card>
 
             <div className="pt-6">
-              <h3 className="font-semibold text-foreground mb-4">{t.contact.followUs}</h3>
+              <h3 className="font-semibold text-foreground mb-6 text-lg">{t.contact.followUs}</h3>
               <div className="flex gap-4">
                 <a 
                   href="https://www.facebook.com/cleanpoolkefalonia"

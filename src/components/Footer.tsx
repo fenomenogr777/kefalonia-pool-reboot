@@ -3,34 +3,38 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const Footer = () => {
   const { t } = useLanguage();
   return (
-    <footer className="bg-primary text-primary-foreground py-8">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
-          <div>
-            <h3 className="text-xl font-bold mb-4">Clean Pool Kefalonia</h3>
-            <p className="text-primary-foreground/80 text-sm">
+    <footer className="bg-gradient-ocean text-primary-foreground py-16 relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="grid md:grid-cols-3 gap-12 mb-12">
+          <div className="space-y-4">
+            <h3 className="text-2xl font-bold">Clean Pool Kefalonia</h3>
+            <p className="text-primary-foreground/80 leading-relaxed">
               {t.footer.description}
             </p>
           </div>
 
-          <div>
-            <h3 className="text-lg font-semibold mb-4">{t.footer.contactTitle}</h3>
-            <div className="space-y-2 text-sm text-primary-foreground/80">
-              <p>{t.footer.phone}: 698 740 4210</p>
-              <p>Email: cleanpoolkefalonia@gmail.com</p>
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold mb-6">{t.footer.contactTitle}</h3>
+            <div className="space-y-3 text-primary-foreground/90">
+              <p className="font-medium">{t.footer.phone}: 698 740 4210</p>
+              <p className="font-medium">Email: cleanpoolkefalonia@gmail.com</p>
             </div>
           </div>
 
-          <div>
-            <h3 className="text-lg font-semibold mb-4">{t.footer.scheduleTitle}</h3>
-            <div className="space-y-2 text-sm text-primary-foreground/80">
-              <p>{t.footer.days}</p>
-              <p>{t.footer.available}</p>
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold mb-6">{t.footer.scheduleTitle}</h3>
+            <div className="space-y-3 text-primary-foreground/90">
+              <p className="font-medium">{t.footer.days}</p>
+              <p className="font-medium">{t.footer.available}</p>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/20 pt-6 text-center text-sm text-primary-foreground/60">
+        <div className="border-t border-primary-foreground/20 pt-8 text-center text-primary-foreground/60">
           <p>&copy; {new Date().getFullYear()} Clean Pool Kefalonia. {t.footer.rights}</p>
         </div>
       </div>
