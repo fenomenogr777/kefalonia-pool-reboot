@@ -1,4 +1,4 @@
-import { Check, Star } from "lucide-react";
+import { Check, Star, UserCircle } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -100,7 +100,10 @@ const About = () => {
                   "{review.text}"
                 </p>
                 <div className="flex items-center justify-between text-xs text-muted-foreground pt-2 border-t border-border/20">
-                  <span className="font-medium text-foreground text-xs">{review.author}</span>
+                  <div className="flex items-center gap-1.5">
+                    <UserCircle className="w-4 h-4 text-primary" />
+                    <span className="font-medium text-foreground text-xs">{review.author}</span>
+                  </div>
                   <span className="text-xs">{review.date}</span>
                 </div>
               </Card>
