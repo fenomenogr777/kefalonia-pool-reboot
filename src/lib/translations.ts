@@ -44,21 +44,24 @@ export const translations = {
           rating: 5,
           text: "Amazing perfect wonderful service, with the nicest kindest person. We really enjoyed our time in the villa and the Pool was super clear and fun to use.",
           date: "a month ago",
-          link: "https://www.google.com/search?sa=X&sca_esv=c8d5800589570891&tbm=lcl&q=Clean+Pool+Kefalonia+%E2%80%93+%CE%A3%CF%85%CE%BD%CF%84%CE%AE%CF%81%CE%B7%CF%83%CE%B7+%26+%CE%9A%CE%B1%CE%B8%CE%B1%CF%81%CE%B9%CF%83%CE%BC%CF%8C%CF%82+%CE%A0%CE%B9%CF%83%CE%AF%CE%BD%CE%B1%CF%82+%CE%91%CE%BE%CE%B9%CE%BF%CE%BB%CE%BF%CE%B3%CE%AE%CF%83%CE%B5%CE%B9%CF%82&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDE0NzC2MDCyMDQyMTGzMLK0MN3AyPiKMcs5JzUxTyEgPz9HwTs1LTEnPy8zUeFRw2SFc4vPt57be77l3Lrzjee2n28-t11BTeHcrHMbz-04txEotBMotOd8z_kmhXMLwJz15_YCJYDcief2ndt5bv-53UC8Gai9-dxWoIKmRax0tAwAyiZD0fUAAAA&rldimm=14170380281244682985&hl=el-GR&ved=2ahUKEwi157DLx9WQAxUwS_EDHdyHC-wQ9fQKegQISBAF&biw=1920&bih=911&dpr=1#lkt=LocalPoiReviews"
+          link: "https://www.google.com/search?sa=X&sca_esv=c8d5800589570891&tbm=lcl&q=Clean+Pool+Kefalonia+%E2%80%93+%CE%A3%CF%85%CE%BD%CF%84%CE%AE%CF%81%CE%B7%CF%83%CE%B7+%26+%CE%9A%CE%B1%CE%B8%CE%B1%CF%81%CE%B9%CF%83%CE%BC%CF%8C%CF%82+%CE%A0%CE%B9%CF%83%CE%AF%CE%BD%CE%B1%CF%82+%CE%91%CE%BE%CE%B9%CE%BF%CE%BB%CE%BF%CE%B3%CE%AE%CF%83%CE%B5%CE%B9%CF%82&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDE0NzC2MDCyMDQyMTGzMLK0MN3AyPiKMcs5JzUxTyEgPz9HwTs1LTEnPy8zUeFRw2SFc4vPt57be77l3Lrzjee2n28-t11BTeHcrHMbz-04txEotBMotOd8z_kmhXMLwJz15_YCJYDcief2ndt5bv-53UC8Gai9-dxWoIKmRax0tAwAyiZD0fUAAAA&rldimm=14170380281244682985&hl=el-GR&ved=2ahUKEwi157DLx9WQAxUwS_EDHdyHC-wQ9fQKegQISBAF&biw=1920&bih=911&dpr=1#lkt=LocalPoiReviews",
+          photoUrl: "https://lh3.googleusercontent.com/a/ACg8ocKZLFqxf3uTXqJVfE8NxLJYzHQPfL-1YxQZJxZxM8dYoYMRLg=s120-c-rp-mo-br100"
         },
         {
           author: "Simon",
           rating: 5,
           text: "We have been to many houses and villas around Europe during the last 25 years and I can honestly say that the swimming pool at Villa Atlantis in Kefalonia was the nicest, cleanest and most enjoyable to swim in.",
           date: "a month ago",
-          link: "https://www.google.com/search?sa=X&sca_esv=c8d5800589570891&tbm=lcl&q=Clean+Pool+Kefalonia+%E2%80%93+%CE%A3%CF%85%CE%BD%CF%84%CE%AE%CF%81%CE%B7%CF%83%CE%B7+%26+%CE%9A%CE%B1%CE%B8%CE%B1%CF%81%CE%B9%CF%83%CE%BC%CF%8C%CF%82+%CE%A0%CE%B9%CF%83%CE%AF%CE%BD%CE%B1%CF%82+%CE%91%CE%BE%CE%B9%CE%BF%CE%BB%CE%BF%CE%B3%CE%AE%CF%83%CE%B5%CE%B9%CF%82&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDE0NzC2MDCyMDQyMTGzMLK0MN3AyPiKMcs5JzUxTyEgPz9HwTs1LTEnPy8zUeFRw2SFc4vPt57be77l3Lrzjee2n28-t11BTeHcrHMbz-04txEotBMotOd8z_kmhXMLwJz15_YCJYDcief2ndt5bv-53UC8Gai9-dxWoIKmRax0tAwAyiZD0fUAAAA&rldimm=14170380281244682985&hl=el-GR&ved=2ahUKEwi157DLx9WQAxUwS_EDHdyHC-wQ9fQKegQISBAF&biw=1920&bih=911&dpr=1#lkt=LocalPoiReviews"
+          link: "https://www.google.com/search?sa=X&sca_esv=c8d5800589570891&tbm=lcl&q=Clean+Pool+Kefalonia+%E2%80%93+%CE%A3%CF%85%CE%BD%CF%84%CE%AE%CF%81%CE%B7%CF%83%CE%B7+%26+%CE%9A%CE%B1%CE%B8%CE%B1%CF%81%CE%B9%CF%83%CE%BC%CF%8C%CF%82+%CE%A0%CE%B9%CF%83%CE%AF%CE%BD%CE%B1%CF%82+%CE%91%CE%BE%CE%B9%CE%BF%CE%BB%CE%BF%CE%B3%CE%AE%CF%83%CE%B5%CE%B9%CF%82&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDE0NzC2MDCyMDQyMTGzMLK0MN3AyPiKMcs5JzUxTyEgPz9HwTs1LTEnPy8zUeFRw2SFc4vPt57be77l3Lrzjee2n28-t11BTeHcrHMbz-04txEotBMotOd8z_kmhXMLwJz15_YCJYDcief2ndt5bv-53UC8Gai9-dxWoIKmRax0tAwAyiZD0fUAAAA&rldimm=14170380281244682985&hl=el-GR&ved=2ahUKEwi157DLx9WQAxUwS_EDHdyHC-wQ9fQKegQISBAF&biw=1920&bih=911&dpr=1#lkt=LocalPoiReviews",
+          photoUrl: "https://lh3.googleusercontent.com/a-/ALV-UjXW8qCGC9KZ-_-0L0rYZDJPQFXLJPQpJYxLJPQp=s120-c-rp-mo-br100"
         },
         {
           author: "Efie Linardatou",
           rating: 5,
           text: "Impeccable cooperation, wonderful result regarding the cleanliness and maintenance of the pool. Immediate response to needs and of course courtesy and personal interest.",
           date: "3 weeks ago",
-          link: "https://www.google.com/search?sa=X&sca_esv=c8d5800589570891&tbm=lcl&q=Clean+Pool+Kefalonia+%E2%80%93+%CE%A3%CF%85%CE%BD%CF%84%CE%AE%CF%81%CE%B7%CF%83%CE%B7+%26+%CE%9A%CE%B1%CE%B8%CE%B1%CF%81%CE%B9%CF%83%CE%BC%CF%8C%CF%82+%CE%A0%CE%B9%CF%83%CE%AF%CE%BD%CE%B1%CF%82+%CE%91%CE%BE%CE%B9%CE%BF%CE%BB%CE%BF%CE%B3%CE%AE%CF%83%CE%B5%CE%B9%CF%82&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDE0NzC2MDCyMDQyMTGzMLK0MN3AyPiKMcs5JzUxTyEgPz9HwTs1LTEnPy8zUeFRw2SFc4vPt57be77l3Lrzjee2n28-t11BTeHcrHMbz-04txEotBMotOd8z_kmhXMLwJz15_YCJYDcief2ndt5bv-53UC8Gai9-dxWoIKmRax0tAwAyiZD0fUAAAA&rldimm=14170380281244682985&hl=el-GR&ved=2ahUKEwi157DLx9WQAxUwS_EDHdyHC-wQ9fQKegQISBAF&biw=1920&bih=911&dpr=1#lkt=LocalPoiReviews"
+          link: "https://www.google.com/search?sa=X&sca_esv=c8d5800589570891&tbm=lcl&q=Clean+Pool+Kefalonia+%E2%80%93+%CE%A3%CF%85%CE%BD%CF%84%CE%AE%CF%81%CE%B7%CF%83%CE%B7+%26+%CE%9A%CE%B1%CE%B8%CE%B1%CF%81%CE%B9%CF%83%CE%BC%CF%8C%CF%82+%CE%A0%CE%B9%CF%83%CE%AF%CE%BD%CE%B1%CF%82+%CE%91%CE%BE%CE%B9%CE%BF%CE%BB%CE%BF%CE%B3%CE%AE%CF%83%CE%B5%CE%B9%CF%82&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDE0NzC2MDCyMDQyMTGzMLK0MN3AyPiKMcs5JzUxTyEgPz9HwTs1LTEnPy8zUeFRw2SFc4vPt57be77l3Lrzjee2n28-t11BTeHcrHMbz-04txEotBMotOd8z_kmhXMLwJz15_YCJYDcief2ndt5bv-53UC8Gai9-dxWoIKmRax0tAwAyiZD0fUAAAA&rldimm=14170380281244682985&hl=el-GR&ved=2ahUKEwi157DLx9WQAxUwS_EDHdyHC-wQ9fQKegQISBAF&biw=1920&bih=911&dpr=1#lkt=LocalPoiReviews",
+          photoUrl: "https://lh3.googleusercontent.com/a/ACg8ocI0YxLJPQpJYxLJPQpJYxLJPQpJYxLJPQp=s120-c-rp-mo-br100"
         }
       ]
     },
@@ -178,21 +181,24 @@ export const translations = {
           rating: 5,
           text: "Απίστευτα τέλεια υπηρεσία, με τον πιο ευγενικό άνθρωπο. Απολαύσαμε πολύ τη διαμονή μας στη βίλα και η πισίνα ήταν πεντακάθαρη και διασκεδαστική.",
           date: "πριν 1 μήνα",
-          link: "https://www.google.com/search?sa=X&sca_esv=c8d5800589570891&tbm=lcl&q=Clean+Pool+Kefalonia+%E2%80%93+%CE%A3%CF%85%CE%BD%CF%84%CE%AE%CF%81%CE%B7%CF%83%CE%B7+%26+%CE%9A%CE%B1%CE%B8%CE%B1%CF%81%CE%B9%CF%83%CE%BC%CF%8C%CF%82+%CE%A0%CE%B9%CF%83%CE%AF%CE%BD%CE%B1%CF%82+%CE%91%CE%BE%CE%B9%CE%BF%CE%BB%CE%BF%CE%B3%CE%AE%CF%83%CE%B5%CE%B9%CF%82&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDE0NzC2MDCyMDQyMTGzMLK0MN3AyPiKMcs5JzUxTyEgPz9HwTs1LTEnPy8zUeFRw2SFc4vPt57be77l3Lrzjee2n28-t11BTeHcrHMbz-04txEotBMotOd8z_kmhXMLwJz15_YCJYDcief2ndt5bv-53UC8Gai9-dxWoIKmRax0tAwAyiZD0fUAAAA&rldimm=14170380281244682985&hl=el-GR&ved=2ahUKEwi157DLx9WQAxUwS_EDHdyHC-wQ9fQKegQISBAF&biw=1920&bih=911&dpr=1#lkt=LocalPoiReviews"
+          link: "https://www.google.com/search?sa=X&sca_esv=c8d5800589570891&tbm=lcl&q=Clean+Pool+Kefalonia+%E2%80%93+%CE%A3%CF%85%CE%BD%CF%84%CE%AE%CF%81%CE%B7%CF%83%CE%B7+%26+%CE%9A%CE%B1%CE%B8%CE%B1%CF%81%CE%B9%CF%83%CE%BC%CF%8C%CF%82+%CE%A0%CE%B9%CF%83%CE%AF%CE%BD%CE%B1%CF%82+%CE%91%CE%BE%CE%B9%CE%BF%CE%BB%CE%BF%CE%B3%CE%AE%CF%83%CE%B5%CE%B9%CF%82&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDE0NzC2MDCyMDQyMTGzMLK0MN3AyPiKMcs5JzUxTyEgPz9HwTs1LTEnPy8zUeFRw2SFc4vPt57be77l3Lrzjee2n28-t11BTeHcrHMbz-04txEotBMotOd8z_kmhXMLwJz15_YCJYDcief2ndt5bv-53UC8Gai9-dxWoIKmRax0tAwAyiZD0fUAAAA&rldimm=14170380281244682985&hl=el-GR&ved=2ahUKEwi157DLx9WQAxUwS_EDHdyHC-wQ9fQKegQISBAF&biw=1920&bih=911&dpr=1#lkt=LocalPoiReviews",
+          photoUrl: "https://lh3.googleusercontent.com/a/ACg8ocKZLFqxf3uTXqJVfE8NxLJYzHQPfL-1YxQZJxZxM8dYoYMRLg=s120-c-rp-mo-br100"
         },
         {
           author: "Simon",
           rating: 5,
           text: "Έχουμε επισκεφθεί πολλές βίλες στην Ευρώπη τα τελευταία 25 χρόνια και μπορώ ειλικρινά να πω ότι η πισίνα στη Villa Atlantis ήταν η πιο ωραία, καθαρή και ευχάριστη.",
           date: "πριν 1 μήνα",
-          link: "https://www.google.com/search?sa=X&sca_esv=c8d5800589570891&tbm=lcl&q=Clean+Pool+Kefalonia+%E2%80%93+%CE%A3%CF%85%CE%BD%CF%84%CE%AE%CF%81%CE%B7%CF%83%CE%B7+%26+%CE%9A%CE%B1%CE%B8%CE%B1%CF%81%CE%B9%CF%83%CE%BC%CF%8C%CF%82+%CE%A0%CE%B9%CF%83%CE%AF%CE%BD%CE%B1%CF%82+%CE%91%CE%BE%CE%B9%CE%BF%CE%BB%CE%BF%CE%B3%CE%AE%CF%83%CE%B5%CE%B9%CF%82&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDE0NzC2MDCyMDQyMTGzMLK0MN3AyPiKMcs5JzUxTyEgPz9HwTs1LTEnPy8zUeFRw2SFc4vPt57be77l3Lrzjee2n28-t11BTeHcrHMbz-04txEotBMotOd8z_kmhXMLwJz15_YCJYDcief2ndt5bv-53UC8Gai9-dxWoIKmRax0tAwAyiZD0fUAAAA&rldimm=14170380281244682985&hl=el-GR&ved=2ahUKEwi157DLx9WQAxUwS_EDHdyHC-wQ9fQKegQISBAF&biw=1920&bih=911&dpr=1#lkt=LocalPoiReviews"
+          link: "https://www.google.com/search?sa=X&sca_esv=c8d5800589570891&tbm=lcl&q=Clean+Pool+Kefalonia+%E2%80%93+%CE%A3%CF%85%CE%BD%CF%84%CE%AE%CF%81%CE%B7%CF%83%CE%B7+%26+%CE%9A%CE%B1%CE%B8%CE%B1%CF%81%CE%B9%CF%83%CE%BC%CF%8C%CF%82+%CE%A0%CE%B9%CF%83%CE%AF%CE%BD%CE%B1%CF%82+%CE%91%CE%BE%CE%B9%CE%BF%CE%BB%CE%BF%CE%B3%CE%AE%CF%83%CE%B5%CE%B9%CF%82&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDE0NzC2MDCyMDQyMTGzMLK0MN3AyPiKMcs5JzUxTyEgPz9HwTs1LTEnPy8zUeFRw2SFc4vPt57be77l3Lrzjee2n28-t11BTeHcrHMbz-04txEotBMotOd8z_kmhXMLwJz15_YCJYDcief2ndt5bv-53UC8Gai9-dxWoIKmRax0tAwAyiZD0fUAAAA&rldimm=14170380281244682985&hl=el-GR&ved=2ahUKEwi157DLx9WQAxUwS_EDHdyHC-wQ9fQKegQISBAF&biw=1920&bih=911&dpr=1#lkt=LocalPoiReviews",
+          photoUrl: "https://lh3.googleusercontent.com/a-/ALV-UjXW8qCGC9KZ-_-0L0rYZDJPQFXLJPQpJYxLJPQp=s120-c-rp-mo-br100"
         },
         {
           author: "Ευτυχία Λιναρδάτου",
           rating: 5,
           text: "Άψογη συνεργασία, υπέροχο αποτέλεσμα στην καθαριότητα και συντήρηση της πισίνας. Άμεση ανταπόκριση στις ανάγκες και φυσικά ευγένεια και προσωπικό ενδιαφέρον.",
           date: "πριν 3 εβδομάδες",
-          link: "https://www.google.com/search?sa=X&sca_esv=c8d5800589570891&tbm=lcl&q=Clean+Pool+Kefalonia+%E2%80%93+%CE%A3%CF%85%CE%BD%CF%84%CE%AE%CF%81%CE%B7%CF%83%CE%B7+%26+%CE%9A%CE%B1%CE%B8%CE%B1%CF%81%CE%B9%CF%83%CE%BC%CF%8C%CF%82+%CE%A0%CE%B9%CF%83%CE%AF%CE%BD%CE%B1%CF%82+%CE%91%CE%BE%CE%B9%CE%BF%CE%BB%CE%BF%CE%B3%CE%AE%CF%83%CE%B5%CE%B9%CF%82&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDE0NzC2MDCyMDQyMTGzMLK0MN3AyPiKMcs5JzUxTyEgPz9HwTs1LTEnPy8zUeFRw2SFc4vPt57be77l3Lrzjee2n28-t11BTeHcrHMbz-04txEotBMotOd8z_kmhXMLwJz15_YCJYDcief2ndt5bv-53UC8Gai9-dxWoIKmRax0tAwAyiZD0fUAAAA&rldimm=14170380281244682985&hl=el-GR&ved=2ahUKEwi157DLx9WQAxUwS_EDHdyHC-wQ9fQKegQISBAF&biw=1920&bih=911&dpr=1#lkt=LocalPoiReviews"
+          link: "https://www.google.com/search?sa=X&sca_esv=c8d5800589570891&tbm=lcl&q=Clean+Pool+Kefalonia+%E2%80%93+%CE%A3%CF%85%CE%BD%CF%84%CE%AE%CF%81%CE%B7%CF%83%CE%B7+%26+%CE%9A%CE%B1%CE%B8%CE%B1%CF%81%CE%B9%CF%83%CE%BC%CF%8C%CF%82+%CE%A0%CE%B9%CF%83%CE%AF%CE%BD%CE%B1%CF%82+%CE%91%CE%BE%CE%B9%CE%BF%CE%BB%CE%BF%CE%B3%CE%AE%CF%83%CE%B5%CE%B9%CF%82&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDE0NzC2MDCyMDQyMTGzMLK0MN3AyPiKMcs5JzUxTyEgPz9HwTs1LTEnPy8zUeFRw2SFc4vPt57be77l3Lrzjee2n28-t11BTeHcrHMbz-04txEotBMotOd8z_kmhXMLwJz15_YCJYDcief2ndt5bv-53UC8Gai9-dxWoIKmRax0tAwAyiZD0fUAAAA&rldimm=14170380281244682985&hl=el-GR&ved=2ahUKEwi157DLx9WQAxUwS_EDHdyHC-wQ9fQKegQISBAF&biw=1920&bih=911&dpr=1#lkt=LocalPoiReviews",
+          photoUrl: "https://lh3.googleusercontent.com/a/ACg8ocI0YxLJPQpJYxLJPQpJYxLJPQpJYxLJPQp=s120-c-rp-mo-br100"
         }
       ]
     },

@@ -1,5 +1,6 @@
-import { Check, Star, UserCircle } from "lucide-react";
+import { Check, Star } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const About = () => {
@@ -100,8 +101,13 @@ const About = () => {
                   "{review.text}"
                 </p>
                 <div className="flex items-center justify-between text-xs text-muted-foreground pt-2 border-t border-border/20">
-                  <div className="flex items-center gap-1.5">
-                    <UserCircle className="w-4 h-4 text-primary" />
+                  <div className="flex items-center gap-2">
+                    <Avatar className="w-6 h-6">
+                      <AvatarImage src={review.photoUrl} alt={review.author} />
+                      <AvatarFallback className="text-xs bg-primary/10 text-primary">
+                        {review.author.split(' ').map(n => n[0]).join('')}
+                      </AvatarFallback>
+                    </Avatar>
                     <span className="font-medium text-foreground text-xs">{review.author}</span>
                   </div>
                   <span className="text-xs">{review.date}</span>
