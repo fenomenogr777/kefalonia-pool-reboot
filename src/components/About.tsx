@@ -1,4 +1,4 @@
-import { Check, Star } from "lucide-react";
+import { Check, Star, ExternalLink } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -89,9 +89,12 @@ const About = () => {
               <Card 
                 key={index}
                 onClick={() => window.open(review.link, '_blank')}
-                className="p-4 hover:shadow-medium transition-all duration-300 animate-fade-in-up bg-card/70 backdrop-blur-sm border-border/40 cursor-pointer hover:scale-105"
+                className="group relative p-4 hover:shadow-lg transition-all duration-300 animate-fade-in-up bg-card/70 backdrop-blur-sm border-border/40 cursor-pointer hover:scale-[1.02] hover:border-primary/50 hover:bg-card/90"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
+                <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <ExternalLink className="w-4 h-4 text-primary" />
+                </div>
                 <div className="flex items-center gap-1 mb-2">
                   {[...Array(review.rating)].map((_, i) => (
                     <Star key={i} className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
