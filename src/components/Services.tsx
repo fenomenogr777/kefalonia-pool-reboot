@@ -16,33 +16,33 @@ const Services = () => {
   const iconMap = [Sun, Droplets, Snowflake, FlaskConical, Sparkles, Wrench, PackagePlus, AlertCircle];
 
   return (
-    <section id="services" className="py-24 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+    <section id="services" className="py-20 sm:py-28 bg-background">
+      <div className="container mx-auto px-6 sm:px-8">
+        <div className="text-center mb-14 sm:mb-20 animate-fade-in">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4">
             {t.services.title}
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             {t.services.subtitle}
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
           {t.services.list.map((service, index) => {
             const Icon = iconMap[index];
             return (
               <Card 
                 key={index}
-                className="p-6 hover:shadow-medium transition-all duration-300 hover:-translate-y-1 border-border/50 animate-fade-in-up"
+                className="p-6 sm:p-7 hover:shadow-medium active:scale-[0.98] transition-all duration-300 hover:-translate-y-1 border-border/50 animate-fade-in-up touch-manipulation"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="bg-gradient-ocean rounded-lg w-14 h-14 flex items-center justify-center mb-4 shadow-soft">
-                  <Icon className="h-7 w-7 text-primary-foreground" />
+                <div className="bg-gradient-ocean rounded-xl w-16 h-16 flex items-center justify-center mb-5 shadow-soft">
+                  <Icon className="h-8 w-8 text-primary-foreground" />
                 </div>
-                <h3 className="text-xl font-medium text-foreground mb-3 tracking-wide">
+                <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-3 tracking-tight">
                   {service.title}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                   {service.description}
                 </p>
               </Card>

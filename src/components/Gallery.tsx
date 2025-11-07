@@ -27,42 +27,45 @@ const Gallery = () => {
   ];
 
   return (
-    <section id="gallery" className="py-24 bg-gradient-light relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-20 left-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 right-0 w-72 h-72 bg-accent/5 rounded-full blur-3xl" />
+    <section id="gallery" className="relative py-20 sm:py-28 bg-gradient-light overflow-hidden">
+      {/* Decorative background elements */}
+      <div className="absolute top-20 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16 animate-fade-in">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/5 rounded-full border border-primary/10 mb-6">
-            <div className="w-2 h-2 bg-primary rounded-full" />
-            <span className="text-xs font-semibold text-primary uppercase tracking-wider">Τα Έργα Μας</span>
+      <div className="container mx-auto px-6 sm:px-8 relative z-10">
+        <div className="text-center mb-14 sm:mb-20 animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-primary/5 rounded-full">
+            <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+            <span className="text-xs font-bold text-primary tracking-wider uppercase">Τα Έργα Μας</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+          
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4 leading-tight">
             {t.gallery.title}
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             {t.gallery.subtitle}
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 animate-fade-in-up">
           {images.map((image, index) => (
-            <div 
+            <div
               key={index}
-              className="group relative aspect-square overflow-hidden rounded-2xl shadow-soft hover:shadow-glow transition-all duration-500 cursor-pointer animate-fade-in-up hover:scale-[1.02] border border-border/50 hover:border-primary/20"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="group relative aspect-square overflow-hidden rounded-lg sm:rounded-xl cursor-pointer shadow-soft hover:shadow-medium active:scale-95 transition-all duration-300 touch-manipulation border border-border/50 hover:border-primary/20"
               onClick={() => setSelectedImage(image.src)}
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <img 
+              <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy"
+                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-                <div className="bg-white/90 backdrop-blur-sm rounded-full p-3 transform translate-y-4 group-hover:translate-y-0 transition-transform shadow-lg">
-                  <Search className="h-6 w-6 text-primary" />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 active:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-full p-3 transform translate-y-4 group-hover:translate-y-0 transition-transform shadow-lg">
+                    <Search className="h-6 w-6 text-primary" />
+                  </div>
                 </div>
               </div>
             </div>

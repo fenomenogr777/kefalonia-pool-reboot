@@ -3,13 +3,13 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const Footer = () => {
   const { t } = useLanguage();
   return (
-    <footer className="bg-gradient-ocean text-primary-foreground py-16 relative overflow-hidden">
+    <footer className="bg-gradient-ocean text-primary-foreground py-16 sm:py-20 relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
       
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
+      <div className="container mx-auto px-6 sm:px-8 relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 sm:gap-12 mb-12">
           <div className="space-y-4">
             <h3 className="text-2xl font-bold">Clean Pool Kefalonia</h3>
             <p className="text-primary-foreground/80 leading-relaxed">
