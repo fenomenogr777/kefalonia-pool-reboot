@@ -65,7 +65,7 @@ const Contact = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 max-w-6xl mx-auto">
           {/* Contact Information */}
-          <div className="space-y-5 sm:space-y-6 animate-fade-in">
+          <div className="space-y-5 sm:space-y-6 animate-fade-in order-2 md:order-1">
             <Card className="p-6 sm:p-8 hover:shadow-glow active:scale-95 transition-all duration-300 border-border/50 hover:border-primary/20 group hover:-translate-y-1 touch-manipulation">
               <div className="flex items-center gap-4">
                 <div className="bg-gradient-ocean rounded-full p-3 sm:p-4 shadow-soft group-hover:shadow-medium transition-shadow">
@@ -134,7 +134,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <Card className="p-6 sm:p-8 shadow-medium border-border/50 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <Card className="p-6 sm:p-8 shadow-medium border-border/50 animate-fade-in-up order-1 md:order-2" style={{ animationDelay: '0.2s' }}>
             <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-semibold text-foreground mb-2">
