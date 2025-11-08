@@ -3,7 +3,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const WhatsAppButton = () => {
   const { language } = useLanguage();
-  const phoneNumber = "306974029244"; // Αντικατάστησε με τον αριθμό σου
+  const phoneNumber = "306987404210";
   const message = language === 'el' 
     ? "Γεια σας! Θα ήθελα περισσότερες πληροφορίες για τις υπηρεσίες συντήρησης πισίνας."
     : "Hello! I would like more information about pool maintenance services.";
