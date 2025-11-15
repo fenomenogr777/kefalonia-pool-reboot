@@ -7,6 +7,14 @@ import { Phone, Mail, Facebook, Instagram } from "lucide-react";
 import { toast } from "sonner";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { supabase } from "@/integrations/supabase/client";
+import { z } from "zod";
+
+const contactSchema = z.object({
+  name: z.string().trim().min(1, "Το όνομα είναι υποχρεωτικό").max(100, "Το όνομα πρέπει να είναι μικρότερο από 100 χαρακτήρες"),
+  email: z.string().trim().email("Μη έγκυρη διεύθυνση email").max(255, "Το email πρέπει να είναι μικρότερο από 255 χαρακτήρες"),
+  phone: z.string().trim().min(1, "Το τηλέφωνο είναι υποχρεωτικό").max(20, "Το τηλέφωνο πρέπει να είναι μικρότερο από 20 χαρακτήρες"),
+  message: z.string().trim().min(1, "Το μήνυμα είναι υποχρεωτικό").max(2000, "Το μήνυμα πρέπει να είναι μικρότερο από 2000 χαρακτήρες")
+});
 
 const Contact = () => {
   const { t } = useLanguage();
@@ -21,8 +29,11 @@ const Contact = () => {
     e.preventDefault();
     
     try {
+      // Validate form data
+      const validated = contactSchema.parse(formData);
+      
       const { error } = await supabase.functions.invoke('send-contact-email', {
-        body: formData
+        body: validated
       });
 
       if (error) throw error;
@@ -31,7 +42,11 @@ const Contact = () => {
       setFormData({ name: "", phone: "", email: "", message: "" });
     } catch (error) {
       console.error('Error sending email:', error);
-      toast.error("Υπήρξε ένα πρόβλημα. Παρακαλώ δοκιμάστε ξανά.");
+      if (error instanceof z.ZodError) {
+        toast.error(error.errors[0].message);
+      } else {
+        toast.error("Υπήρξε ένα πρόβλημα. Παρακαλώ δοκιμάστε ξανά.");
+      }
     }
   };
 
