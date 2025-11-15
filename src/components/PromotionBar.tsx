@@ -15,7 +15,7 @@ const PromotionBar = () => {
   return (
     <div className="fixed right-6 top-24 z-40">
       <div 
-        className={`bg-primary text-primary-foreground rounded-full shadow-lg transition-all duration-300 ${
+        className={`bg-promo text-promo-foreground rounded-full shadow-xl shadow-promo/30 transition-all duration-300 hover:shadow-2xl hover:shadow-promo/40 hover:scale-105 ${
           isExpanded ? 'px-4 py-2' : 'px-3 py-2'
         }`}
       >
@@ -34,13 +34,13 @@ const PromotionBar = () => {
             <>
               <button
                 onClick={handleClick}
-                className="bg-primary-foreground text-primary px-3 py-1 rounded-full text-xs font-semibold hover:scale-105 transition-transform animate-fade-in"
+                className="bg-promo-foreground text-promo px-3 py-1 rounded-full text-xs font-semibold hover:scale-105 transition-transform animate-fade-in"
               >
                 Επικοινωνία
               </button>
               <button
                 onClick={() => setIsVisible(false)}
-                className="p-1 hover:bg-primary-foreground/20 rounded-full transition-colors animate-fade-in"
+                className="p-1 hover:bg-promo-foreground/20 rounded-full transition-colors animate-fade-in"
                 aria-label="Close promotion"
               >
                 <X className="h-3 w-3" />
