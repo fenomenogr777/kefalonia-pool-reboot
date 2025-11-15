@@ -14,13 +14,42 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      contact_rate_limits: {
+        Row: {
+          created_at: string
+          email: string
+          first_submission_at: string
+          id: string
+          ip_address: string
+          last_submission_at: string
+          submission_count: number
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          first_submission_at?: string
+          id?: string
+          ip_address: string
+          last_submission_at?: string
+          submission_count?: number
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          first_submission_at?: string
+          id?: string
+          ip_address?: string
+          last_submission_at?: string
+          submission_count?: number
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      cleanup_old_rate_limits: { Args: never; Returns: undefined }
     }
     Enums: {
       [_ in never]: never
