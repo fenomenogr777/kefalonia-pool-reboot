@@ -13,35 +13,42 @@ const PromotionBar = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed right-6 top-24 z-40 flex items-center gap-2">
-      {isExpanded && (
-        <div className="bg-primary text-primary-foreground px-4 py-2 rounded-full shadow-lg animate-fade-in flex items-center gap-2">
-          <span className="text-sm font-medium whitespace-nowrap">
-            10% έκπτωση
-          </span>
-          <button
-            onClick={handleClick}
-            className="bg-primary-foreground text-primary px-3 py-1 rounded-full text-xs font-semibold hover:scale-105 transition-transform"
-          >
-            Επικοινωνία
-          </button>
-          <button
-            onClick={() => setIsVisible(false)}
-            className="p-1 hover:bg-primary-foreground/20 rounded-full transition-colors ml-1"
-            aria-label="Close promotion"
-          >
-            <X className="h-3 w-3" />
-          </button>
-        </div>
-      )}
-      
-      <button
-        onClick={() => setIsExpanded(!isExpanded)}
-        className="bg-primary text-primary-foreground rounded-full p-3 shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 animate-pulse"
-        aria-label="Promotion"
+    <div className="fixed right-6 top-24 z-40">
+      <div 
+        className={`bg-primary text-primary-foreground rounded-full shadow-lg transition-all duration-300 ${
+          isExpanded ? 'px-4 py-2' : 'px-3 py-2'
+        }`}
       >
-        <Tag className="h-5 w-5" />
-      </button>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="flex items-center gap-2 hover:scale-105 transition-transform"
+          >
+            <Tag className="h-4 w-4" />
+            <span className="text-sm font-bold whitespace-nowrap">
+              10% έκπτωση
+            </span>
+          </button>
+          
+          {isExpanded && (
+            <>
+              <button
+                onClick={handleClick}
+                className="bg-primary-foreground text-primary px-3 py-1 rounded-full text-xs font-semibold hover:scale-105 transition-transform animate-fade-in"
+              >
+                Επικοινωνία
+              </button>
+              <button
+                onClick={() => setIsVisible(false)}
+                className="p-1 hover:bg-primary-foreground/20 rounded-full transition-colors animate-fade-in"
+                aria-label="Close promotion"
+              >
+                <X className="h-3 w-3" />
+              </button>
+            </>
+          )}
+        </div>
+      </div>
     </div>
   );
 };
