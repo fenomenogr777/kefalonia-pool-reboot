@@ -13,7 +13,6 @@ const Index = () => {
   return (
     <LanguageProvider>
       <div className="min-h-screen">
-        <PromotionBar />
         <Navigation />
         <main>
           <Hero />
@@ -24,6 +23,7 @@ const Index = () => {
         </main>
         <Footer />
         <WhatsAppButton />
+        <PromotionBar />
       </div>
     </LanguageProvider>
   );
