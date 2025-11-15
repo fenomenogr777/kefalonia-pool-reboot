@@ -25,8 +25,8 @@ const PromotionBar = () => {
             className="flex items-center gap-2 hover:scale-105 transition-transform"
           >
             <Tag className="h-4 w-4" />
-            <span className="text-sm font-bold whitespace-nowrap">
-              10% έκπτωση
+            <span className="text-xs font-bold whitespace-nowrap">
+              Νέος πελάτης; Κέρδισε -10% τώρα
             </span>
           </button>
           
@@ -34,9 +34,9 @@ const PromotionBar = () => {
             <>
               <button
                 onClick={handleClick}
-                className="bg-promo-foreground text-promo px-3 py-1 rounded-full text-xs font-semibold hover:scale-105 transition-transform animate-fade-in"
+                className="bg-promo-foreground text-promo px-3 py-1 rounded-full text-xs font-semibold hover:scale-105 transition-transform animate-fade-in whitespace-nowrap"
               >
-                Επικοινωνία
+                Ζήτα την προσφορά
               </button>
               <button
                 onClick={() => setIsVisible(false)}
