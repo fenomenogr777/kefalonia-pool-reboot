@@ -44,11 +44,73 @@ export type Database = {
         }
         Relationships: []
       }
+      google_reviews_cache: {
+        Row: {
+          cached_at: string
+          created_at: string
+          id: string
+          place_id: string
+          rating: string
+          reviews: Json
+          total_reviews: number
+        }
+        Insert: {
+          cached_at?: string
+          created_at?: string
+          id?: string
+          place_id: string
+          rating: string
+          reviews: Json
+          total_reviews: number
+        }
+        Update: {
+          cached_at?: string
+          created_at?: string
+          id?: string
+          place_id?: string
+          rating?: string
+          reviews?: Json
+          total_reviews?: number
+        }
+        Relationships: []
+      }
+      google_reviews_rate_limits: {
+        Row: {
+          created_at: string
+          first_request_at: string
+          id: string
+          ip_address: string
+          last_request_at: string
+          request_count: number
+        }
+        Insert: {
+          created_at?: string
+          first_request_at?: string
+          id?: string
+          ip_address: string
+          last_request_at?: string
+          request_count?: number
+        }
+        Update: {
+          created_at?: string
+          first_request_at?: string
+          id?: string
+          ip_address?: string
+          last_request_at?: string
+          request_count?: number
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
+      cleanup_old_google_reviews_cache: { Args: never; Returns: undefined }
+      cleanup_old_google_reviews_rate_limits: {
+        Args: never
+        Returns: undefined
+      }
       cleanup_old_rate_limits: { Args: never; Returns: undefined }
     }
     Enums: {
