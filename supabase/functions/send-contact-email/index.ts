@@ -25,7 +25,7 @@ const handler = async (req: Request): Promise<Response> => {
   try {
     const { name, email, phone, message }: ContactEmailRequest = await req.json();
 
-    console.log("Sending contact email for:", { name, email, phone });
+    console.log("Processing contact form submission");
 
     // Send email to the business owner using Resend API
     const emailResponse = await fetch('https://api.resend.com/emails', {
