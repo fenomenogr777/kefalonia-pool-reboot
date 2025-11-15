@@ -6,12 +6,14 @@ import Gallery from "@/components/Gallery";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import PromotionBar from "@/components/PromotionBar";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 
 const Index = () => {
   return (
     <LanguageProvider>
       <div className="min-h-screen">
+        <PromotionBar />
         <Navigation />
         <main>
           <Hero />
