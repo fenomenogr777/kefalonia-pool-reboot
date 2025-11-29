@@ -4,10 +4,17 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const Reviews = () => {
   const { t } = useLanguage();
 
+  const googleReviewsUrl = "https://www.google.com/maps/place/Clean+Pool+Kefalonia+%E2%80%93+%CE%A3%CF%85%CE%BD%CF%84%CE%AE%CF%81%CE%B7%CF%83%CE%B7+%26+%CE%9A%CE%B1%CE%B8%CE%B1%CF%81%CE%B9%CF%83%CE%BC%CF%8C%CF%82+%CE%A0%CE%B9%CF%83%CE%AF%CE%BD%CE%B1%CF%82/@38.2662511,20.4115987,54612m/data=!3m1!1e3!4m14!1m5!8m4!1e1!2s116236589460706263358!3m1!1e1!3m7!1s0xab644146e42a63b:0xc4a74dc9b3ca0ae9!8m2!3d38.2660968!4d20.576406!9m1!1b1!16s%2Fg%2F11wjk5w_qv?hl=el&entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D";
+
   return (
     <section id="reviews" className="py-16 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center">
+        <a 
+          href={googleReviewsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block max-w-4xl mx-auto text-center hover:opacity-90 transition-opacity cursor-pointer"
+        >
           <div className="inline-flex items-center gap-2 mb-6">
             <div className="flex gap-1">
               {[...Array(5)].map((_, i) => (
@@ -34,7 +41,7 @@ const Reviews = () => {
             </svg>
             <span>Google Reviews</span>
           </div>
-        </div>
+        </a>
       </div>
     </section>
   );
