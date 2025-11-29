@@ -1,22 +1,24 @@
 export const translations = {
   en: {
     nav: {
-      home: "HOME",
-      about: "ABOUT US",
-      services: "SERVICES",
-      gallery: "GALLERY",
-      contact: "CONTACT"
+      home: "Home",
+      about: "About us",
+      whyUs: "Why us",
+      pricing: "Pricing & packages",
+      services: "Services",
+      gallery: "Gallery",
+      contact: "Contact"
     },
     hero: {
-      title: "POOL MAINTENANCE AND CLEANING",
-      subtitle: "IN KEFALONIA",
+      title: "Pool maintenance and cleaning",
+      subtitle: "in Kefalonia",
       description: "We offer professional pool cleaning and maintenance services for villas and residences",
-      requestQuote: "REQUEST A QUOTE",
+      requestQuote: "Request a quote",
       phone: "698 740 4210",
       trustIndicators: {
-        experience: "6+ Years Experience",
-        clients: "50+ Happy Clients",
-        service: "Professional Service"
+        experience: "6+ Years experience",
+        clients: "50+ Happy clients",
+        service: "Professional service"
       }
     },
     about: {
@@ -35,35 +37,36 @@ export const translations = {
       }
     },
     whyChooseUs: {
-      title: "Why Choose Us",
+      title: "Why choose us",
       subtitle: "Completely worry-free pool maintenance",
-      feature1Title: "Worry-Free Guarantee",
+      feature1Title: "Worry-free guarantee",
       feature1Desc: "You won't have to worry about anything. We handle everything for your pool.",
-      feature2Title: "Always Available",
+      feature2Title: "Always available",
       feature2Desc: "24/7 availability for any emergency or need that may arise.",
-      feature3Title: "Professional Team",
+      feature3Title: "Professional team",
       feature3Desc: "Certified professionals with years of experience in pool maintenance.",
-      feature4Title: "Complete Service",
+      feature4Title: "Complete service",
       feature4Desc: "From cleaning to chemicals, we provide everything needed for your pool."
     },
     pricing: {
-      title: "Pricing & Packages",
+      title: "Pricing & packages",
       subtitle: "Simple, transparent, and affordable",
-      badge: "Most Popular",
-      packageName: "Complete Care Package",
+      badge: "Most popular",
+      packageName: "Complete care package",
       perMonth: "month",
-      priceNote: "*Final price depends on pool size and frequency",
-      feature1: "2 weekly visits for cleaning and maintenance",
-      feature2: "Complete chemical balance control",
-      feature3: "Professional equipment inspection",
-      feature4: "All necessary chemical supplies included",
-      feature5: "Emergency service 24/7",
-      feature6: "Guaranteed crystal clear water",
-      ctaPrimary: "Request a Quote",
-      ctaSecondary: "Call Now"
+      priceNote: "*Final price depends on pool size and services",
+      feature1: "3 weekly visits for cleaning and maintenance",
+      feature2: "Professional equipment inspection",
+      feature3: "Complete chemical balance control",
+      feature4: "Guaranteed crystal clear water",
+      extra1: "Chemical supply included",
+      extra2: "Emergency service 24/7",
+      extra3: "Garden maintenance",
+      ctaPrimary: "Request a quote",
+      ctaSecondary: "Call now"
     },
     reviews: {
-      title: "WHAT OUR CLIENTS SAY",
+      title: "What our clients say",
       businessName: "Clean Pool Kefalonia – Pool Maintenance & Cleaning",
       rating: "5.0",
       reviews: [
@@ -94,7 +97,7 @@ export const translations = {
       ]
     },
     services: {
-      title: "SERVICES",
+      title: "Services",
       subtitle: "Complete maintenance solutions for your pool",
       list: [
         {
@@ -132,11 +135,11 @@ export const translations = {
       ]
     },
     gallery: {
-      title: "GALLERY",
+      title: "Gallery",
       subtitle: "Some of our work"
     },
     contact: {
-      title: "CONTACT US",
+      title: "Contact us",
       subtitle: "We are here to serve you",
       phone: "Phone",
       email: "Email",
@@ -150,7 +153,7 @@ export const translations = {
         emailPlaceholder: "email@example.com",
         message: "Message",
         messagePlaceholder: "Tell us how we can help you...",
-        submit: "SEND MESSAGE",
+        submit: "Send message",
         success: "Your message was sent successfully! We will contact you soon."
       }
     },
@@ -166,22 +169,24 @@ export const translations = {
   },
   el: {
     nav: {
-      home: "ΑΡΧΙΚΗ",
-      about: "ΠΟΙΟΙ ΕΙΜΑΣΤΕ",
-      services: "ΥΠΗΡΕΣΙΕΣ",
-      gallery: "ΦΩΤΟΓΡΑΦΙΕΣ",
-      contact: "ΕΠΙΚΟΙΝΩΝΙΑ"
+      home: "Αρχική",
+      about: "Ποιοι είμαστε",
+      whyUs: "Γιατί εμείς",
+      pricing: "Τιμές & πακέτα",
+      services: "Υπηρεσίες",
+      gallery: "Φωτογραφίες",
+      contact: "Επικοινωνία"
     },
     hero: {
-      title: "ΣΥΝΤΗΡΗΣΗ ΚΑΙ ΚΑΘΑΡΙΣΜΟΣ ΠΙΣΙΝΑΣ",
-      subtitle: "ΣΤΗΝ ΚΕΦΑΛΟΝΙΑ",
+      title: "Συντήρηση και καθαρισμός πισίνας",
+      subtitle: "στην Κεφαλονιά",
       description: "Προσφέρουμε επαγγελματικές υπηρεσίες καθαρισμού και συντήρησης πισίνας σε βίλες και κατοικίες",
-      requestQuote: "ΖΗΤΗΣΤΕ ΠΡΟΣΦΟΡΑ",
+      requestQuote: "Ζητήστε προσφορά",
       phone: "698 740 4210",
       trustIndicators: {
-        experience: "6+ Χρόνια Εμπειρίας",
-        clients: "50+ Ευχαριστημένοι Πελάτες",
-        service: "Επαγγελματική Εξυπηρέτηση"
+        experience: "6+ Χρόνια εμπειρίας",
+        clients: "50+ Ευχαριστημένοι πελάτες",
+        service: "Επαγγελματική εξυπηρέτηση"
       }
     },
     about: {
@@ -202,33 +207,34 @@ export const translations = {
     whyChooseUs: {
       title: "Γιατί να μας επιλέξετε",
       subtitle: "Απόλυτα ξέγνοιαστη συντήρηση πισίνας",
-      feature1Title: "Εγγύηση Ξεγνοιασιάς",
+      feature1Title: "Εγγύηση ξεγνοιασιάς",
       feature1Desc: "Δεν θα χρειαστεί να ανησυχήσετε για τίποτα. Εμείς αναλαμβάνουμε τα πάντα για την πισίνα σας.",
-      feature2Title: "Πάντα Διαθέσιμοι",
+      feature2Title: "Πάντα διαθέσιμοι",
       feature2Desc: "24/7 διαθεσιμότητα για οποιοδήποτε έκτακτο περιστατικό ή ανάγκη προκύψει.",
-      feature3Title: "Επαγγελματική Ομάδα",
+      feature3Title: "Επαγγελματική ομάδα",
       feature3Desc: "Πιστοποιημένοι επαγγελματίες με χρόνια εμπειρίας στη συντήρηση πισινών.",
-      feature4Title: "Ολοκληρωμένη Εξυπηρέτηση",
+      feature4Title: "Ολοκληρωμένη εξυπηρέτηση",
       feature4Desc: "Από καθαρισμό μέχρι χημικά, παρέχουμε όλα όσα χρειάζεται η πισίνα σας."
     },
     pricing: {
-      title: "Τιμές & Πακέτα",
+      title: "Τιμές & πακέτα",
       subtitle: "Απλά, διαφανή και προσιτά",
-      badge: "Πιο Δημοφιλές",
-      packageName: "Πακέτο Πλήρους Φροντίδας",
+      badge: "Πιο δημοφιλές",
+      packageName: "Πακέτο πλήρους φροντίδας",
       perMonth: "μήνα",
-      priceNote: "*Η τελική τιμή εξαρτάται από το μέγεθος και τη συχνότητα",
-      feature1: "2 εβδομαδιαίες επισκέψεις για καθαρισμό και συντήρηση",
-      feature2: "Πλήρης έλεγχος χημικής ισορροπίας",
-      feature3: "Επαγγελματικός έλεγχος εξοπλισμού",
-      feature4: "Όλα τα απαραίτητα χημικά προϊόντα περιλαμβάνονται",
-      feature5: "Υπηρεσία έκτακτης ανάγκης 24/7",
-      feature6: "Εγγύηση κρυστάλλινου νερού",
-      ctaPrimary: "Ζητήστε Προσφορά",
-      ctaSecondary: "Καλέστε Τώρα"
+      priceNote: "*Η τελική τιμή εξαρτάται από το μέγεθος και τις υπηρεσίες",
+      feature1: "3 εβδομαδιαίες επισκέψεις για καθαρισμό και συντήρηση",
+      feature2: "Επαγγελματικός έλεγχος εξοπλισμού",
+      feature3: "Πλήρης έλεγχος χημικής ισορροπίας",
+      feature4: "Εγγύηση κρυστάλλινου νερού",
+      extra1: "Παροχή χημικών προϊόντων",
+      extra2: "Υπηρεσία έκτακτης ανάγκης 24/7",
+      extra3: "Συντήρηση κήπου",
+      ctaPrimary: "Ζητήστε προσφορά",
+      ctaSecondary: "Καλέστε τώρα"
     },
     reviews: {
-      title: "ΤΙ ΛΕΝΕ ΟΙ ΠΕΛΑΤΕΣ ΜΑΣ",
+      title: "Τι λένε οι πελάτες μας",
       businessName: "Clean Pool Kefalonia – Συντήρηση & Καθαρισμός Πισίνας",
       rating: "5.0",
       reviews: [
@@ -259,7 +265,7 @@ export const translations = {
       ]
     },
     services: {
-      title: "ΥΠΗΡΕΣΙΕΣ",
+      title: "Υπηρεσίες",
       subtitle: "Ολοκληρωμένες λύσεις συντήρησης για την πισίνα σας",
       list: [
         {
@@ -297,11 +303,11 @@ export const translations = {
       ]
     },
     gallery: {
-      title: "ΦΩΤΟΓΡΑΦΙΕΣ",
+      title: "Φωτογραφίες",
       subtitle: "Μερικά από τα έργα μας"
     },
     contact: {
-      title: "ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΑΖΙ ΜΑΣ",
+      title: "Επικοινωνήστε μαζί μας",
       subtitle: "Είμαστε εδώ για να σας εξυπηρετήσουμε",
       phone: "Τηλέφωνο",
       email: "Email",
@@ -315,7 +321,7 @@ export const translations = {
         emailPlaceholder: "email@example.com",
         message: "Μήνυμα",
         messagePlaceholder: "Πείτε μας πώς μπορούμε να σας βοηθήσουμε...",
-        submit: "ΑΠΟΣΤΟΛΗ ΜΗΝΥΜΑΤΟΣ",
+        submit: "Αποστολή μηνύματος",
         success: "Το μήνυμά σας στάλθηκε επιτυχώς! Θα επικοινωνήσουμε σύντομα μαζί σας."
       }
     },
