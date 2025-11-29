@@ -61,7 +61,8 @@ export const translations = {
       feature4: "Guaranteed crystal clear water",
       extra1: "Chemical supply included",
       extra2: "Emergency service 24/7",
-      extra3: "Garden maintenance",
+      extra3: "Garden Maintenance – Comprehensive outdoor space care",
+      extra4: "Services tailored to your needs",
       ctaPrimary: "Request a quote",
       ctaSecondary: "Call now"
     },
@@ -229,7 +230,8 @@ export const translations = {
       feature4: "Εγγύηση κρυστάλλινου νερού",
       extra1: "Παροχή χημικών προϊόντων",
       extra2: "Υπηρεσία έκτακτης ανάγκης 24/7",
-      extra3: "Συντήρηση κήπου",
+      extra3: "Συντήρηση Κήπου – Ολοκληρωμένη φροντίδα εξωτερικών χώρων",
+      extra4: "Υπηρεσίες προσαρμοσμένες στις ανάγκες σας",
       ctaPrimary: "Ζητήστε προσφορά",
       ctaSecondary: "Καλέστε τώρα"
     },

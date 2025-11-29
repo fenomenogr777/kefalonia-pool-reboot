@@ -21,6 +21,7 @@ const Pricing = () => {
     t.pricing.extra1,
     t.pricing.extra2,
     t.pricing.extra3,
+    t.pricing.extra4,
   ];
 
   return (
