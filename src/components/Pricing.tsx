@@ -47,9 +47,12 @@ const Pricing = () => {
               <h3 className="text-3xl md:text-4xl font-bold mb-2">
                 {t.pricing.packageName}
               </h3>
-              <div className="flex items-baseline justify-center gap-2 mt-6">
-                <span className="text-5xl md:text-6xl font-bold">220€</span>
-                <span className="text-xl opacity-90">/{t.pricing.perMonth}</span>
+              <div className="flex flex-col items-center gap-1 mt-6">
+                <span className="text-sm opacity-80">{t.pricing.fromOnly}</span>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-5xl md:text-6xl font-bold">220€</span>
+                  <span className="text-xl opacity-90">/{t.pricing.perMonth}</span>
+                </div>
               </div>
               <p className="mt-4 text-primary-foreground/90">
                 {t.pricing.priceNote}
@@ -76,8 +79,8 @@ const Pricing = () => {
                 <div className="space-y-3">
                   {extraFeatures.map((feature, index) => (
                     <div key={index} className="flex items-start gap-3">
-                      <div className="bg-accent/10 rounded-full p-1 mt-1">
-                        <Check className="w-5 h-5 text-accent" />
+                      <div className="bg-promo/10 rounded-full p-1 mt-1">
+                        <Check className="w-5 h-5 text-promo" />
                       </div>
                       <span className="text-foreground leading-relaxed">{feature}</span>
                     </div>
