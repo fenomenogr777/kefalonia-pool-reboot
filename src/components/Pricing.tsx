@@ -10,13 +10,17 @@ const Pricing = () => {
     contactSection?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const features = [
+  const basicFeatures = [
     t.pricing.feature1,
     t.pricing.feature2,
     t.pricing.feature3,
     t.pricing.feature4,
-    t.pricing.feature5,
-    t.pricing.feature6,
+  ];
+
+  const extraFeatures = [
+    t.pricing.extra1,
+    t.pricing.extra2,
+    t.pricing.extra3,
   ];
 
   return (
@@ -52,15 +56,32 @@ const Pricing = () => {
             </div>
 
             <div className="p-8 md:p-10">
-              <div className="space-y-4 mb-8">
-                {features.map((feature, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <div className="bg-primary/10 rounded-full p-1 mt-1">
-                      <Check className="w-5 h-5 text-primary" />
+              <div className="mb-6">
+                <h4 className="text-sm font-bold text-muted-foreground uppercase tracking-wide mb-4">Βασικές υπηρεσίες</h4>
+                <div className="space-y-3">
+                  {basicFeatures.map((feature, index) => (
+                    <div key={index} className="flex items-start gap-3">
+                      <div className="bg-primary/10 rounded-full p-1 mt-1">
+                        <Check className="w-5 h-5 text-primary" />
+                      </div>
+                      <span className="text-foreground leading-relaxed">{feature}</span>
                     </div>
-                    <span className="text-foreground leading-relaxed">{feature}</span>
-                  </div>
-                ))}
+                  ))}
+                </div>
+              </div>
+
+              <div className="mb-8 pt-6 border-t border-border">
+                <h4 className="text-sm font-bold text-muted-foreground uppercase tracking-wide mb-4">Επιπλέον υπηρεσίες</h4>
+                <div className="space-y-3">
+                  {extraFeatures.map((feature, index) => (
+                    <div key={index} className="flex items-start gap-3">
+                      <div className="bg-accent/10 rounded-full p-1 mt-1">
+                        <Check className="w-5 h-5 text-accent" />
+                      </div>
+                      <span className="text-foreground leading-relaxed">{feature}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
 
               <div className="space-y-4">
