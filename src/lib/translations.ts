@@ -14,6 +14,7 @@ export const translations = {
       subtitle: "in Kefalonia",
       description: "We offer professional pool cleaning and maintenance services for villas and residences",
       requestQuote: "Request a quote",
+      pricingButton: "Pricing & Packages",
       phone: "698 740 4210",
       trustIndicators: {
         experience: "6+ Years experience",
@@ -64,7 +65,7 @@ export const translations = {
       extra2: "Emergency service 24/7",
       extra3: "Garden Maintenance – Comprehensive outdoor space care",
       extra4: "Services tailored to your needs",
-      ctaPrimary: "Request a quote",
+      ctaPrimary: "Request free estimate",
       ctaSecondary: "Call now"
     },
     reviews: {
@@ -184,6 +185,7 @@ export const translations = {
       subtitle: "στην Κεφαλονιά",
       description: "Προσφέρουμε επαγγελματικές υπηρεσίες καθαρισμού και συντήρησης πισίνας σε βίλες και κατοικίες",
       requestQuote: "Ζητήστε προσφορά",
+      pricingButton: "Τιμές & Πακέτα",
       phone: "698 740 4210",
       trustIndicators: {
         experience: "6+ Χρόνια εμπειρίας",
@@ -234,7 +236,7 @@ export const translations = {
       extra2: "Υπηρεσία έκτακτης ανάγκης 24/7",
       extra3: "Συντήρηση Κήπου – Ολοκληρωμένη φροντίδα εξωτερικών χώρων",
       extra4: "Υπηρεσίες προσαρμοσμένες στις ανάγκες σας",
-      ctaPrimary: "Ζητήστε προσφορά",
+      ctaPrimary: "Ζητήστε δωρεάν εκτίμηση",
       ctaSecondary: "Καλέστε τώρα"
     },
     reviews: {

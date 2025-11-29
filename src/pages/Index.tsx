@@ -5,7 +5,6 @@ import Pricing from "@/components/Pricing";
 import Gallery from "@/components/Gallery";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 
 const Index = () => {
@@ -15,13 +14,12 @@ const Index = () => {
         <Navigation />
         <main>
           <Hero />
-          <WhyChooseUs />
           <Pricing />
+          <WhyChooseUs />
           <Gallery />
           <Contact />
         </main>
         <Footer />
-        <WhatsAppButton />
       </div>
     </LanguageProvider>
   );
