@@ -27,44 +27,44 @@ const Gallery = () => {
   ];
 
   return (
-    <section id="gallery" className="relative py-20 sm:py-28 bg-gradient-light overflow-hidden">
+    <section id="gallery" className="relative py-16 sm:py-20 bg-gradient-light overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute top-20 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       
-      <div className="container mx-auto px-6 sm:px-8 relative z-10">
-        <div className="text-center mb-14 sm:mb-20 animate-fade-in">
-          <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-primary/5 rounded-full">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        <div className="text-center mb-10 sm:mb-14 animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 bg-primary/5 rounded-full">
             <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
             <span className="text-xs font-bold text-primary tracking-wider uppercase">Τα Έργα Μας</span>
           </div>
           
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4 leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-3 leading-tight">
             {t.gallery.title}
           </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             {t.gallery.subtitle}
           </p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 animate-fade-in-up">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 animate-fade-in-up">
           {images.map((image, index) => (
             <div
               key={index}
-              className="group relative aspect-square overflow-hidden rounded-lg sm:rounded-xl cursor-pointer shadow-soft hover:shadow-medium active:scale-95 transition-all duration-300 touch-manipulation border border-border/50 hover:border-primary/20"
+              className="group relative aspect-square overflow-hidden rounded-lg cursor-pointer shadow-soft hover:shadow-medium active:scale-[0.98] transition-all duration-300 touch-manipulation border border-border/30 hover:border-primary/30"
               onClick={() => setSelectedImage(image.src)}
-              style={{ animationDelay: `${index * 0.1}s` }}
+              style={{ animationDelay: `${index * 0.08}s` }}
             >
               <img
                 src={image.src}
                 alt={image.alt}
                 loading="lazy"
-                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 active:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-primary/10 to-transparent opacity-0 group-hover:opacity-100 active:opacity-100 transition-opacity duration-300">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="bg-white/95 backdrop-blur-sm rounded-full p-3 transform translate-y-4 group-hover:translate-y-0 transition-transform shadow-lg">
-                    <Search className="h-6 w-6 text-primary" />
+                  <div className="bg-white/90 backdrop-blur-sm rounded-full p-2.5 transform translate-y-3 group-hover:translate-y-0 transition-transform shadow-lg">
+                    <Search className="h-5 w-5 text-primary" />
                   </div>
                 </div>
               </div>
