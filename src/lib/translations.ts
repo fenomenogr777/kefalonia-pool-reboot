@@ -70,6 +70,7 @@ export const translations = {
     },
     reviews: {
       title: "What our clients say",
+      subtitle: "Trusted by villa owners across Kefalonia",
       businessName: "Clean Pool Kefalonia – Pool Maintenance & Cleaning",
       rating: "5.0",
       reviews: [
@@ -241,6 +242,7 @@ export const translations = {
     },
     reviews: {
       title: "Τι λένε οι πελάτες μας",
+      subtitle: "Εμπιστεύονται οι ιδιοκτήτες βιλών σε όλη την Κεφαλονιά",
       businessName: "Clean Pool Kefalonia – Συντήρηση & Καθαρισμός Πισίνας",
       rating: "5.0",
       reviews: [
