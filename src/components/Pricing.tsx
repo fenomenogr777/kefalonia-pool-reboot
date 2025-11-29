@@ -102,7 +102,7 @@ const Pricing = () => {
                   size="lg"
                   className="w-full text-lg h-14"
                 >
-                  <a href="tel:+306948517251">
+                  <a href="tel:+306987404210">
                     <Phone className="w-5 h-5 mr-2" />
                     {t.pricing.ctaSecondary}
                   </a>
