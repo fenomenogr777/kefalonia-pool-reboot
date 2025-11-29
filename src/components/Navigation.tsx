@@ -24,8 +24,8 @@ const Navigation = () => {
 
   const navLinks = [
     { label: t.nav.home, href: '#home' },
-    { label: t.nav.about, href: '#about' },
-    { label: t.nav.services, href: '#services' },
+    { label: "Γιατί Εμείς", href: '#why-choose-us' },
+    { label: "Τιμές & Πακέτα", href: '#pricing' },
     { label: t.nav.gallery, href: '#gallery' },
     { label: t.nav.contact, href: '#contact' },
   ];

@@ -26,8 +26,8 @@ const PromotionBar = () => {
           >
             <Tag className="h-3.5 w-3.5 md:h-4 md:w-4 flex-shrink-0" />
             <span className="text-[10px] md:text-xs font-bold leading-tight">
-              Νέος πελάτης;<br className="md:hidden" />
-              <span className="hidden md:inline"> </span>Κέρδισε -10% τώρα
+              Από μόνο<br className="md:hidden" />
+              <span className="hidden md:inline"> </span>220€/μήνα
             </span>
           </button>
           

@@ -29,7 +29,7 @@ const Hero = () => {
         {/* Eyebrow Text */}
         <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 animate-fade-in">
           <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-          <span className="text-xs font-semibold text-white/95 tracking-wider uppercase">Professional Pool Services</span>
+          <span className="text-xs font-semibold text-white/95 tracking-wider uppercase">Ξεγνοιαστείτε για την Πισίνα σας</span>
         </div>
 
         {/* Main Heading */}
@@ -41,9 +41,16 @@ const Hero = () => {
         </h1>
         
         {/* Description */}
-        <p className="text-base sm:text-lg md:text-xl text-white/90 mb-10 sm:mb-12 max-w-2xl mx-auto animate-fade-in-up leading-relaxed font-normal">
+        <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto animate-fade-in-up leading-relaxed font-normal">
           {t.hero.description}
         </p>
+
+        {/* Worry-Free Message */}
+        <div className="bg-accent/20 backdrop-blur-md border border-white/30 rounded-2xl px-6 py-4 mb-10 sm:mb-12 max-w-2xl mx-auto animate-scale-in">
+          <p className="text-white font-semibold text-lg md:text-xl">
+            Εμείς τα κάνουμε όλα. Εσείς απολαμβάνετε.
+          </p>
+        </div>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center animate-scale-in mb-16 max-w-md mx-auto sm:max-w-none">

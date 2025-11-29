@@ -1,8 +1,9 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Services from "@/components/Services";
+import WhyChooseUs from "@/components/WhyChooseUs";
+import Pricing from "@/components/Pricing";
 import Gallery from "@/components/Gallery";
+import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -16,9 +17,10 @@ const Index = () => {
         <Navigation />
         <main>
           <Hero />
-          <About />
-          <Services />
+          <WhyChooseUs />
+          <Pricing />
           <Gallery />
+          <About />
           <Contact />
         </main>
         <Footer />

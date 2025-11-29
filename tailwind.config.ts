@@ -62,6 +62,7 @@ export default {
         'soft': 'var(--shadow-soft)',
         'medium': 'var(--shadow-medium)',
         'glow': 'var(--shadow-glow)',
+        'elegant': 'var(--shadow-accent)',
       },
       borderRadius: {
         lg: "var(--radius)",
