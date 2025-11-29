@@ -54,8 +54,8 @@ const Pricing = () => {
                   <span className="text-xl opacity-90">/{t.pricing.perMonth}</span>
                 </div>
               </div>
-              <p className="mt-4 text-primary-foreground/90">
-                {t.pricing.priceNote}
+              <p className="mt-4 text-primary-foreground/90 text-sm">
+                Η τελική τιμή εξαρτάται από το μέγεθος της πισίνας και τις επιλεγμένες υπηρεσίες
               </p>
             </div>
 

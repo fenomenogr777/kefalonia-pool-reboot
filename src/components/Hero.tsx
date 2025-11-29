@@ -6,8 +6,8 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const Hero = () => {
   const { t } = useLanguage();
   
-  const scrollToContact = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToPricing = () => {
+    document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -95,11 +95,11 @@ const Hero = () => {
           <Button 
             variant="hero" 
             size="lg"
-            onClick={scrollToContact}
+            onClick={scrollToPricing}
             className="w-full sm:w-auto sm:min-w-[220px] h-14 sm:h-16 text-base sm:text-lg font-bold bg-white text-primary hover:bg-white/95 shadow-2xl hover:shadow-glow active:scale-95 hover:scale-105 transition-all duration-300 relative overflow-hidden group touch-manipulation"
           >
             <span className="relative z-10 flex items-center justify-center gap-2">
-              {t.hero.requestQuote}
+              {t.hero.pricingButton}
               <span className="text-xl group-hover:translate-x-1 transition-transform">→</span>
             </span>
           </Button>
