@@ -34,6 +34,34 @@ export const translations = {
         professionalism: "Professionalism"
       }
     },
+    whyChooseUs: {
+      title: "Why Choose Us",
+      subtitle: "Completely worry-free pool maintenance",
+      feature1Title: "Worry-Free Guarantee",
+      feature1Desc: "You won't have to worry about anything. We handle everything for your pool.",
+      feature2Title: "Always Available",
+      feature2Desc: "24/7 availability for any emergency or need that may arise.",
+      feature3Title: "Professional Team",
+      feature3Desc: "Certified professionals with years of experience in pool maintenance.",
+      feature4Title: "Complete Service",
+      feature4Desc: "From cleaning to chemicals, we provide everything needed for your pool."
+    },
+    pricing: {
+      title: "Pricing & Packages",
+      subtitle: "Simple, transparent, and affordable",
+      badge: "Most Popular",
+      packageName: "Complete Care Package",
+      perMonth: "month",
+      priceNote: "*Final price depends on pool size and frequency",
+      feature1: "2 weekly visits for cleaning and maintenance",
+      feature2: "Complete chemical balance control",
+      feature3: "Professional equipment inspection",
+      feature4: "All necessary chemical supplies included",
+      feature5: "Emergency service 24/7",
+      feature6: "Guaranteed crystal clear water",
+      ctaPrimary: "Request a Quote",
+      ctaSecondary: "Call Now"
+    },
     reviews: {
       title: "WHAT OUR CLIENTS SAY",
       businessName: "Clean Pool Kefalonia – Pool Maintenance & Cleaning",
@@ -170,6 +198,34 @@ export const translations = {
         visits: "Επισκέψεις σε Πισίνες κάθε Σεζόν",
         professionalism: "Επαγγελματισμός"
       }
+    },
+    whyChooseUs: {
+      title: "Γιατί να μας επιλέξετε",
+      subtitle: "Απόλυτα ξέγνοιαστη συντήρηση πισίνας",
+      feature1Title: "Εγγύηση Ξεγνοιασιάς",
+      feature1Desc: "Δεν θα χρειαστεί να ανησυχήσετε για τίποτα. Εμείς αναλαμβάνουμε τα πάντα για την πισίνα σας.",
+      feature2Title: "Πάντα Διαθέσιμοι",
+      feature2Desc: "24/7 διαθεσιμότητα για οποιοδήποτε έκτακτο περιστατικό ή ανάγκη προκύψει.",
+      feature3Title: "Επαγγελματική Ομάδα",
+      feature3Desc: "Πιστοποιημένοι επαγγελματίες με χρόνια εμπειρίας στη συντήρηση πισινών.",
+      feature4Title: "Ολοκληρωμένη Εξυπηρέτηση",
+      feature4Desc: "Από καθαρισμό μέχρι χημικά, παρέχουμε όλα όσα χρειάζεται η πισίνα σας."
+    },
+    pricing: {
+      title: "Τιμές & Πακέτα",
+      subtitle: "Απλά, διαφανή και προσιτά",
+      badge: "Πιο Δημοφιλές",
+      packageName: "Πακέτο Πλήρους Φροντίδας",
+      perMonth: "μήνα",
+      priceNote: "*Η τελική τιμή εξαρτάται από το μέγεθος και τη συχνότητα",
+      feature1: "2 εβδομαδιαίες επισκέψεις για καθαρισμό και συντήρηση",
+      feature2: "Πλήρης έλεγχος χημικής ισορροπίας",
+      feature3: "Επαγγελματικός έλεγχος εξοπλισμού",
+      feature4: "Όλα τα απαραίτητα χημικά προϊόντα περιλαμβάνονται",
+      feature5: "Υπηρεσία έκτακτης ανάγκης 24/7",
+      feature6: "Εγγύηση κρυστάλλινου νερού",
+      ctaPrimary: "Ζητήστε Προσφορά",
+      ctaSecondary: "Καλέστε Τώρα"
     },
     reviews: {
       title: "ΤΙ ΛΕΝΕ ΟΙ ΠΕΛΑΤΕΣ ΜΑΣ",
