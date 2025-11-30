@@ -10,9 +10,13 @@ export const translations = {
       contact: "Contact"
     },
     hero: {
+      eyebrow: "Worry-free pool care",
       title: "Pool maintenance and cleaning",
       subtitle: "in Kefalonia",
       description: "We offer professional pool cleaning and maintenance services for villas and residences",
+      worryFree: "We do everything. You enjoy.",
+      guarantee: "Guaranteed crystal clear water - No green, no cloudy",
+      followUs: "Follow us:",
       requestQuote: "Request a quote",
       pricingButton: "Pricing & Packages",
       phone: "698 740 4210",
@@ -182,9 +186,13 @@ export const translations = {
       contact: "Επικοινωνία"
     },
     hero: {
+      eyebrow: "Ξεγνοιαστείτε για την πισίνα σας",
       title: "Συντήρηση και καθαρισμός πισίνας",
       subtitle: "στην Κεφαλονιά",
       description: "Προσφέρουμε επαγγελματικές υπηρεσίες καθαρισμού και συντήρησης πισίνας σε βίλες και κατοικίες",
+      worryFree: "Εμείς τα κάνουμε όλα. Εσείς απολαμβάνετε.",
+      guarantee: "Εγγύηση κρυστάλλινου νερού - Όχι πράσινο, όχι θολό",
+      followUs: "Ακολουθήστε μας:",
       requestQuote: "Ζητήστε προσφορά",
       pricingButton: "Τιμές & Πακέτα",
       phone: "698 740 4210",
