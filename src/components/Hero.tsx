@@ -12,16 +12,16 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Dark Overlay for Better Contrast */}
+      {/* Background Image with Lighter Overlay for Better Photo Visibility */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ 
           backgroundImage: `url(${heroImage})`,
-          filter: 'brightness(0.5)'
+          filter: 'brightness(0.75)'
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/80 to-primary/85" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-primary/30 to-primary/35" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/20 to-transparent" />
       </div>
 
       {/* Content Container */}
@@ -29,35 +29,35 @@ const Hero = () => {
         {/* Eyebrow Text */}
         <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 bg-white/20 backdrop-blur-md rounded-full border border-white/40 animate-fade-in">
           <div className="w-2 h-2 bg-white rounded-full animate-pulse shadow-glow" />
-          <span className="text-xs font-bold text-white tracking-wider uppercase">Ξεγνοιαστείτε για την πισίνα σας</span>
+          <span className="text-xs font-bold text-white tracking-wider uppercase drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">{t.hero.eyebrow}</span>
         </div>
 
         {/* Main Heading */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 animate-fade-in leading-[1.1] tracking-tight drop-shadow-2xl">
-          <span className="block mb-2 font-semibold">{t.hero.title}</span>
-          <span className="block text-white font-bold">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 animate-fade-in leading-[1.1] tracking-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]">
+          <span className="block mb-2 font-semibold backdrop-blur-[2px]">{t.hero.title}</span>
+          <span className="block text-white font-bold backdrop-blur-[2px]">
             {t.hero.subtitle}
           </span>
         </h1>
         
         {/* Description */}
-        <p className="text-base sm:text-lg md:text-xl text-white mb-6 sm:mb-8 max-w-2xl mx-auto animate-fade-in-up leading-relaxed font-medium drop-shadow-lg">
+        <p className="text-base sm:text-lg md:text-xl text-white mb-6 sm:mb-8 max-w-2xl mx-auto animate-fade-in-up leading-relaxed font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
           {t.hero.description}
         </p>
 
         {/* Worry-Free Message */}
         <div className="bg-white/15 backdrop-blur-md border-2 border-white/50 rounded-2xl px-6 py-5 mb-8 max-w-2xl mx-auto animate-scale-in shadow-2xl">
-          <p className="text-white font-bold text-xl md:text-2xl mb-2 drop-shadow-lg">
-            Εμείς τα κάνουμε όλα. Εσείς απολαμβάνετε.
+          <p className="text-white font-bold text-xl md:text-2xl mb-2 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+            {t.hero.worryFree}
           </p>
-          <p className="text-white text-sm md:text-base font-semibold drop-shadow-md">
-            ✓ Εγγύηση κρυστάλλινου νερού - Όχι πράσινο, όχι θολό
+          <p className="text-white text-sm md:text-base font-semibold drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
+            ✓ {t.hero.guarantee}
           </p>
         </div>
 
         {/* Social Media */}
         <div className="flex items-center justify-center gap-4 mb-10 animate-fade-in">
-          <span className="text-white text-sm font-bold drop-shadow-md">Ακολουθήστε μας:</span>
+          <span className="text-white text-sm font-bold drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">{t.hero.followUs}</span>
           <a 
             href="https://www.facebook.com/cleanpoolkefalonia" 
             target="_blank" 
@@ -118,7 +118,7 @@ const Hero = () => {
         </div>
 
         {/* Trust Indicators */}
-        <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-5 sm:gap-8 text-white text-sm font-semibold animate-fade-in-up drop-shadow-md" style={{ animationDelay: '0.3s' }}>
+        <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-5 sm:gap-8 text-white text-sm font-semibold animate-fade-in-up drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]" style={{ animationDelay: '0.3s' }}>
           <div className="flex items-center justify-center gap-2">
             <div className="w-1.5 h-1.5 bg-white rounded-full shadow-glow" />
             <span>{t.hero.trustIndicators.experience}</span>
