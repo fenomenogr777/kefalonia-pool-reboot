@@ -7,6 +7,7 @@ export const translations = {
       pricing: "Pricing & packages",
       services: "Services",
       gallery: "Gallery",
+      reviews: "Reviews",
       contact: "Contact"
     },
     hero: {
@@ -183,10 +184,11 @@ export const translations = {
       pricing: "Τιμές & πακέτα",
       services: "Υπηρεσίες",
       gallery: "Φωτογραφίες",
+      reviews: "Κριτικές",
       contact: "Επικοινωνία"
     },
     hero: {
-      eyebrow: "Ξεγνοιαστείτε για την πισίνα σας",
+      eyebrow: "Ξεγνοιαστε για την πισίνα σας",
       title: "Συντήρηση και καθαρισμός πισίνας",
       subtitle: "στην Κεφαλονιά",
       description: "Προσφέρουμε επαγγελματικές υπηρεσίες καθαρισμού και συντήρησης πισίνας σε βίλες και κατοικίες",

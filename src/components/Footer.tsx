@@ -3,7 +3,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const Footer = () => {
   const { t } = useLanguage();
   return (
-    <footer className="bg-background border-t border-border text-foreground py-16 sm:py-20">
+    <footer className="bg-gradient-to-b from-secondary/40 to-secondary/60 border-t border-border text-foreground py-16 sm:py-20">
       <div className="container mx-auto px-6 sm:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 sm:gap-12 mb-12">
           <div className="space-y-4">
