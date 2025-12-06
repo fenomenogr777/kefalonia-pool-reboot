@@ -3,34 +3,36 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const Footer = () => {
   const { t } = useLanguage();
   return (
-    <footer className="bg-gradient-to-b from-secondary/40 to-secondary/60 border-t border-border text-foreground py-16 sm:py-20">
-      <div className="container mx-auto px-6 sm:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 sm:gap-12 mb-12">
+    <footer className="bg-charcoal text-white py-16 sm:py-20">
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 mb-12">
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-primary">Clean Pool Kefalonia</h3>
-            <p className="text-muted-foreground leading-relaxed">
+            <h3 className="text-xl font-semibold text-white">
+              <span className="text-primary">Clean Pool</span> Kefalonia
+            </h3>
+            <p className="text-white/60 leading-relaxed text-sm">
               {t.footer.description}
             </p>
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold mb-6">{t.footer.contactTitle}</h3>
-            <div className="space-y-3 text-foreground">
-              <p className="font-medium">{t.footer.phone}: 698 740 4210</p>
-              <p className="font-medium">Email: cleanpoolkefalonia@gmail.com</p>
+            <h3 className="text-lg font-semibold text-white">{t.footer.contactTitle}</h3>
+            <div className="space-y-2 text-white/70 text-sm">
+              <p>{t.footer.phone}: 698 740 4210</p>
+              <p>Email: cleanpoolkefalonia@gmail.com</p>
             </div>
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold mb-6">{t.footer.scheduleTitle}</h3>
-            <div className="space-y-3 text-foreground">
-              <p className="font-medium">{t.footer.days}</p>
-              <p className="font-medium">{t.footer.available}</p>
+            <h3 className="text-lg font-semibold text-white">{t.footer.scheduleTitle}</h3>
+            <div className="space-y-2 text-white/70 text-sm">
+              <p>{t.footer.days}</p>
+              <p>{t.footer.available}</p>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-border pt-8 text-center text-muted-foreground">
+        <div className="border-t border-white/10 pt-8 text-center text-white/50 text-sm">
           <p>&copy; {new Date().getFullYear()} Clean Pool Kefalonia. {t.footer.rights}</p>
         </div>
       </div>

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { Search } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
@@ -27,33 +26,26 @@ const Gallery = () => {
   ];
 
   return (
-    <section id="gallery" className="relative py-16 sm:py-20 bg-gradient-light overflow-hidden">
-      {/* Decorative background elements */}
-      <div className="absolute top-20 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-      
-      <div className="container mx-auto px-4 sm:px-6 relative z-10">
-        <div className="text-center mb-10 sm:mb-14 animate-fade-in">
-          <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 bg-primary/5 rounded-full">
-            <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-            <span className="text-xs font-bold text-primary tracking-wider uppercase">Τα Έργα Μας</span>
-          </div>
-          
-          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-3 leading-tight">
+    <section id="gallery" className="py-24 sm:py-32 bg-background">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <span className="text-sm font-semibold text-primary tracking-widest uppercase mb-4 block">
+            Τα Έργα Μας
+          </span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-charcoal mb-4">
             {t.gallery.title}
           </h2>
-          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-muted-foreground max-w-xl mx-auto">
             {t.gallery.subtitle}
           </p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 animate-fade-in-up">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           {images.map((image, index) => (
             <div
               key={index}
-              className="group relative aspect-square overflow-hidden rounded-lg cursor-pointer shadow-soft hover:shadow-medium active:scale-[0.98] transition-all duration-300 touch-manipulation border border-border/30 hover:border-primary/30"
+              className="group relative aspect-square overflow-hidden rounded-lg cursor-pointer border border-border hover:border-primary/30 transition-all duration-300"
               onClick={() => setSelectedImage(image.src)}
-              style={{ animationDelay: `${index * 0.08}s` }}
             >
               <img
                 src={image.src}
@@ -61,13 +53,7 @@ const Gallery = () => {
                 loading="lazy"
                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-primary/10 to-transparent opacity-0 group-hover:opacity-100 active:opacity-100 transition-opacity duration-300">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="bg-white/90 backdrop-blur-sm rounded-full p-2.5 transform translate-y-3 group-hover:translate-y-0 transition-transform shadow-lg">
-                    <Search className="h-5 w-5 text-primary" />
-                  </div>
-                </div>
-              </div>
+              <div className="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/20 transition-colors duration-300" />
             </div>
           ))}
         </div>
