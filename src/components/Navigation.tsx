@@ -39,23 +39,23 @@ const Navigation = () => {
 
   return (
     <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-background/98 backdrop-blur-xl shadow-soft border-b border-border/50' 
+          ? 'bg-background/95 backdrop-blur-md shadow-subtle border-b border-border' 
           : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <button 
             onClick={() => scrollToSection('#home')}
-            className="text-2xl font-bold hover:opacity-80 transition-all duration-300 hover:scale-105"
+            className="text-xl font-semibold hover:opacity-80 transition-opacity"
           >
-            <span className={`transition-colors font-bold ${isScrolled ? 'text-primary' : 'text-primary-foreground drop-shadow-lg'}`}>
+            <span className={`transition-colors ${isScrolled ? 'text-primary' : 'text-primary'}`}>
               Clean Pool
             </span>
-            <span className={`transition-colors font-bold ${isScrolled ? 'text-secondary' : 'text-accent drop-shadow-lg'}`}>
+            <span className={`transition-colors ${isScrolled ? 'text-charcoal' : 'text-white'}`}>
               {" "}Kefalonia
             </span>
           </button>
@@ -66,12 +66,13 @@ const Navigation = () => {
               <button
                 key={link.href}
                 onClick={() => scrollToSection(link.href)}
-                className={`text-sm font-semibold transition-all duration-300 hover:scale-105 relative group ${
-                  isScrolled ? 'text-foreground hover:text-primary' : 'text-primary-foreground hover:text-accent drop-shadow-md'
+                className={`text-sm font-medium transition-colors ${
+                  isScrolled 
+                    ? 'text-charcoal-light hover:text-primary' 
+                    : 'text-white/90 hover:text-white'
                 }`}
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300" />
               </button>
             ))}
             
@@ -81,22 +82,26 @@ const Navigation = () => {
                 <Button 
                   variant="ghost" 
                   size="sm"
-                  className={`gap-2 font-semibold hover:scale-105 transition-all ${isScrolled ? 'text-foreground hover:text-secondary' : 'text-primary-foreground hover:text-accent drop-shadow-md'}`}
+                  className={`gap-2 font-medium ${
+                    isScrolled 
+                      ? 'text-charcoal-light hover:text-primary' 
+                      : 'text-white/90 hover:text-white hover:bg-white/10'
+                  }`}
                 >
                   <Globe className="h-4 w-4" />
                   {language.toUpperCase()}
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="bg-background border-border z-[100] shadow-glow">
+              <DropdownMenuContent align="end" className="bg-background border-border z-[100]">
                 <DropdownMenuItem 
                   onClick={() => setLanguage("el")}
-                  className={`cursor-pointer font-medium ${language === "el" ? "bg-primary/10 text-primary" : ""}`}
+                  className={`cursor-pointer ${language === "el" ? "bg-primary/10 text-primary" : ""}`}
                 >
                   🇬🇷 Ελληνικά
                 </DropdownMenuItem>
                 <DropdownMenuItem 
                   onClick={() => setLanguage("en")}
-                  className={`cursor-pointer font-medium ${language === "en" ? "bg-primary/10 text-primary" : ""}`}
+                  className={`cursor-pointer ${language === "en" ? "bg-primary/10 text-primary" : ""}`}
                 >
                   🇬🇧 English
                 </DropdownMenuItem>
@@ -106,13 +111,12 @@ const Navigation = () => {
 
           {/* Mobile Menu Button & Language */}
           <div className="md:hidden flex items-center gap-2">
-            {/* Mobile Language Switcher */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button 
                   variant="ghost" 
                   size="icon"
-                  className={isScrolled ? 'text-foreground' : 'text-primary-foreground'}
+                  className={isScrolled ? 'text-charcoal' : 'text-white'}
                 >
                   <Globe className="h-5 w-5" />
                 </Button>
@@ -120,13 +124,13 @@ const Navigation = () => {
               <DropdownMenuContent align="end" className="bg-background border-border z-[100]">
                 <DropdownMenuItem 
                   onClick={() => setLanguage("el")}
-                  className={`cursor-pointer ${language === "el" ? "bg-muted" : ""}`}
+                  className={`cursor-pointer ${language === "el" ? "bg-primary/10" : ""}`}
                 >
                   🇬🇷 Ελληνικά
                 </DropdownMenuItem>
                 <DropdownMenuItem 
                   onClick={() => setLanguage("en")}
-                  className={`cursor-pointer ${language === "en" ? "bg-muted" : ""}`}
+                  className={`cursor-pointer ${language === "en" ? "bg-primary/10" : ""}`}
                 >
                   🇬🇧 English
                 </DropdownMenuItem>
@@ -137,24 +141,21 @@ const Navigation = () => {
               variant="ghost"
               size="icon"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className={isScrolled ? 'text-charcoal' : 'text-white'}
             >
-              {isMobileMenuOpen ? (
-                <X className={isScrolled ? 'text-foreground' : 'text-primary-foreground'} />
-              ) : (
-                <Menu className={isScrolled ? 'text-foreground' : 'text-primary-foreground'} />
-              )}
+              {isMobileMenuOpen ? <X /> : <Menu />}
             </Button>
           </div>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 bg-background/98 backdrop-blur-xl rounded-2xl mb-4 shadow-glow border border-border/50">
+          <div className="md:hidden py-4 bg-background rounded-lg mb-4 shadow-soft border border-border">
             {navLinks.map((link) => (
               <button
                 key={link.href}
                 onClick={() => scrollToSection(link.href)}
-                className="block w-full text-left px-6 py-3 text-sm font-semibold text-foreground hover:bg-primary/5 hover:text-primary transition-all duration-300"
+                className="block w-full text-left px-6 py-3 text-sm font-medium text-charcoal hover:bg-secondary hover:text-primary transition-colors"
               >
                 {link.label}
               </button>

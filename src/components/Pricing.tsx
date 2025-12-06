@@ -25,74 +25,78 @@ const Pricing = () => {
   ];
 
   return (
-    <section id="pricing" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="pricing" className="py-24 sm:py-32 bg-background">
+      <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <span className="text-sm font-semibold text-primary tracking-widest uppercase mb-4 block">
+            {t.pricing.badge}
+          </span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-charcoal mb-4">
             {t.pricing.title}
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-xl mx-auto">
             {t.pricing.subtitle}
           </p>
         </div>
 
-        <div className="max-w-2xl mx-auto">
-          <div className="bg-card border-2 border-primary rounded-2xl shadow-elegant overflow-hidden">
-            <div className="bg-gradient-to-r from-primary to-primary/80 text-primary-foreground p-8 text-center">
-              <div className="inline-block bg-primary-foreground/20 px-4 py-2 rounded-full mb-4">
-                <span className="text-sm font-semibold uppercase tracking-wide">
-                  {t.pricing.badge}
-                </span>
-              </div>
-              <h3 className="text-3xl md:text-4xl font-bold mb-2">
+        <div className="max-w-xl mx-auto">
+          <div className="bg-card border border-border rounded-lg shadow-soft overflow-hidden">
+            {/* Header */}
+            <div className="bg-charcoal text-white p-8 sm:p-10 text-center">
+              <h3 className="text-2xl sm:text-3xl font-semibold mb-2 text-white">
                 {t.pricing.packageName}
               </h3>
               <div className="flex flex-col items-center gap-1 mt-6">
-                <span className="text-sm opacity-80">{t.pricing.fromOnly}</span>
+                <span className="text-sm text-white/70">{t.pricing.fromOnly}</span>
                 <div className="flex items-baseline gap-2">
-                  <span className="text-5xl md:text-6xl font-bold">220€</span>
-                  <span className="text-xl opacity-90">/{t.pricing.perMonth}</span>
+                  <span className="text-5xl sm:text-6xl font-semibold text-primary">220€</span>
+                  <span className="text-lg text-white/80">/{t.pricing.perMonth}</span>
                 </div>
               </div>
-              <p className="mt-4 text-primary-foreground/90 text-sm">
+              <p className="mt-4 text-white/60 text-sm max-w-sm mx-auto">
                 Η τελική τιμή εξαρτάται από το μέγεθος της πισίνας και τις επιλεγμένες υπηρεσίες
               </p>
             </div>
 
-            <div className="p-8 md:p-10">
-              <div className="mb-6">
-                <h4 className="text-sm font-bold text-muted-foreground uppercase tracking-wide mb-4">Βασικές υπηρεσίες</h4>
-                <div className="space-y-3">
+            {/* Features */}
+            <div className="p-8 sm:p-10">
+              <div className="mb-8">
+                <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-5">
+                  Βασικές υπηρεσίες
+                </h4>
+                <div className="space-y-4">
                   {basicFeatures.map((feature, index) => (
                     <div key={index} className="flex items-start gap-3">
-                      <div className="bg-primary/10 rounded-full p-1 mt-1">
-                        <Check className="w-5 h-5 text-primary" />
+                      <div className="bg-primary/10 rounded-full p-1 mt-0.5">
+                        <Check className="w-4 h-4 text-primary" />
                       </div>
-                      <span className="text-foreground leading-relaxed">{feature}</span>
+                      <span className="text-foreground">{feature}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="mb-8 pt-6 border-t border-border">
-                <h4 className="text-sm font-bold text-muted-foreground uppercase tracking-wide mb-4">Επιπλέον υπηρεσίες</h4>
-                <div className="space-y-3">
+              <div className="mb-10 pt-6 border-t border-border">
+                <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-5">
+                  Επιπλέον υπηρεσίες
+                </h4>
+                <div className="space-y-4">
                   {extraFeatures.map((feature, index) => (
                     <div key={index} className="flex items-start gap-3">
-                      <div className="bg-promo/10 rounded-full p-1 mt-1">
-                        <Check className="w-5 h-5 text-promo" />
+                      <div className="bg-primary/10 rounded-full p-1 mt-0.5">
+                        <Check className="w-4 h-4 text-primary" />
                       </div>
-                      <span className="text-foreground leading-relaxed">{feature}</span>
+                      <span className="text-foreground">{feature}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="space-y-4">
+              <div className="space-y-3">
                 <Button
                   onClick={scrollToContact}
                   size="lg"
-                  className="w-full text-lg h-14 shadow-elegant hover:shadow-soft transition-all"
+                  className="w-full h-12 text-base font-semibold bg-primary hover:bg-primary/90 text-primary-foreground shadow-gold hover:shadow-elegant transition-all"
                 >
                   {t.pricing.ctaPrimary}
                 </Button>
@@ -100,10 +104,10 @@ const Pricing = () => {
                   asChild
                   variant="outline"
                   size="lg"
-                  className="w-full text-lg h-14"
+                  className="w-full h-12 text-base border-border text-charcoal hover:bg-secondary"
                 >
-                  <a href="tel:+306987404210">
-                    <Phone className="w-5 h-5 mr-2" />
+                  <a href="tel:+306987404210" className="flex items-center justify-center gap-2">
+                    <Phone className="w-4 h-4" />
                     {t.pricing.ctaSecondary}
                   </a>
                 </Button>
