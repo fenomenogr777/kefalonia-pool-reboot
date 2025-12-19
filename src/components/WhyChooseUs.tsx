@@ -1,8 +1,10 @@
 import { Shield, Clock, Award, CheckCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const WhyChooseUs = () => {
   const { t } = useLanguage();
+  const { ref, isVisible } = useScrollAnimation(0.1);
 
   const features = [
     {
@@ -39,16 +41,23 @@ const WhyChooseUs = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div ref={ref} className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-card p-8 rounded-lg border border-border hover:border-primary/30 hover:shadow-soft transition-all duration-300 group"
+              className={`bg-card p-8 rounded-xl border border-border hover:border-primary/40 hover:shadow-medium transition-all duration-500 group ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}
+              style={{
+                transitionDelay: isVisible ? `${index * 100}ms` : "0ms",
+              }}
             >
-              <div className="bg-primary/10 w-14 h-14 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary/15 transition-colors">
-                <feature.icon className="w-7 h-7 text-primary" />
+              <div className="bg-primary/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                <feature.icon className="w-7 h-7 text-primary group-hover:text-white transition-colors" />
               </div>
-              <h3 className="text-lg font-semibold text-charcoal mb-3">{feature.title}</h3>
+              <h3 className="text-lg font-semibold text-charcoal mb-3 group-hover:text-primary transition-colors">
+                {feature.title}
+              </h3>
               <p className="text-muted-foreground leading-relaxed text-sm">
                 {feature.description}
               </p>

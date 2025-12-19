@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
@@ -12,6 +13,7 @@ import gallery8 from "@/assets/gallery-8.jpg";
 
 const Gallery = () => {
   const { t } = useLanguage();
+  const { ref, isVisible } = useScrollAnimation(0.05);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const images = [
@@ -40,20 +42,30 @@ const Gallery = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        <div ref={ref} className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           {images.map((image, index) => (
             <div
               key={index}
-              className="group relative aspect-square overflow-hidden rounded-lg cursor-pointer border border-border hover:border-primary/30 transition-all duration-300"
+              className={`group relative aspect-square overflow-hidden rounded-xl cursor-pointer border-2 border-transparent hover:border-primary/50 transition-all duration-500 ${
+                isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
+              }`}
+              style={{
+                transitionDelay: isVisible ? `${index * 75}ms` : "0ms",
+              }}
               onClick={() => setSelectedImage(image.src)}
             >
               <img
                 src={image.src}
                 alt={image.alt}
                 loading="lazy"
-                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/20 transition-colors duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <span className="text-white text-sm font-medium drop-shadow-lg">
+                  {image.alt}
+                </span>
+              </div>
             </div>
           ))}
         </div>
@@ -66,7 +78,7 @@ const Gallery = () => {
             <img 
               src={selectedImage}
               alt="Enlarged view"
-              className="w-full h-auto rounded-lg"
+              className="w-full h-auto rounded-lg animate-scale-in"
             />
           )}
         </DialogContent>
