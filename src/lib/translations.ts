@@ -71,7 +71,7 @@ export const translations = {
       },
       professional: {
         name: "Professional",
-        visits: "4 visits per week",
+        visits: "3 visits per week",
         price: "220",
         features: ["Regular cleaning & maintenance", "Professional equipment inspection", "Complete chemical balance control", "Guaranteed crystal clear water", "Chemical supply included", "Emergency service 24/7"]
       },
@@ -257,7 +257,7 @@ export const translations = {
       },
       professional: {
         name: "Professional",
-        visits: "4 επισκέψεις την εβδομάδα",
+        visits: "3 επισκέψεις την εβδομάδα",
         price: "220",
         features: ["Τακτικός καθαρισμός & συντήρηση", "Επαγγελματικός έλεγχος εξοπλισμού", "Πλήρης έλεγχος χημικής ισορροπίας", "Εγγύηση κρυστάλλινου νερού", "Παροχή χημικών προϊόντων", "Υπηρεσία έκτακτης ανάγκης 24/7"]
       },
