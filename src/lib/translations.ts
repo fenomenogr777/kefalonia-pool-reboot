@@ -58,20 +58,29 @@ export const translations = {
       title: "Pricing & packages",
       subtitle: "Simple, transparent, and affordable",
       badge: "Most popular",
-      packageName: "Complete care package",
       fromOnly: "From",
       perMonth: "month",
       priceNote: "*Final price depends on pool size and services",
-      feature1: "3 weekly visits for cleaning and maintenance",
-      feature2: "Professional equipment inspection",
-      feature3: "Complete chemical balance control",
-      feature4: "Guaranteed crystal clear water",
-      extra1: "Chemical supply included",
-      extra2: "Emergency service 24/7",
-      extra3: "Garden Maintenance – Comprehensive outdoor space care",
-      extra4: "Services tailored to your needs",
       ctaPrimary: "Request free estimate",
-      ctaSecondary: "Call now"
+      ctaSecondary: "Call now",
+      lite: {
+        name: "Lite",
+        visits: "2 visits per week",
+        price: "180",
+        features: ["Weekly cleaning", "Chemical balance check", "Basic maintenance", "Email support"]
+      },
+      professional: {
+        name: "Professional",
+        visits: "4 visits per week",
+        price: "220",
+        features: ["Regular cleaning & maintenance", "Professional equipment inspection", "Complete chemical balance control", "Guaranteed crystal clear water", "Chemical supply included", "Emergency service 24/7"]
+      },
+      premium: {
+        name: "Premium",
+        visits: "6 visits per week",
+        price: "400",
+        features: ["Daily cleaning & maintenance", "Professional equipment inspection", "Complete chemical balance control", "Guaranteed crystal clear water", "Chemical supply included", "Emergency service 24/7", "Garden maintenance", "Priority support"]
+      }
     },
     reviews: {
       title: "What our clients say",
@@ -235,20 +244,29 @@ export const translations = {
       title: "Τιμές & πακέτα",
       subtitle: "Απλά, διαφανή και προσιτά",
       badge: "Πιο δημοφιλές",
-      packageName: "Πακέτο Πλήρους Φροντίδας",
       fromOnly: "Από",
       perMonth: "μήνα",
       priceNote: "*Η τελική τιμή εξαρτάται από το μέγεθος και τις υπηρεσίες",
-      feature1: "3 εβδομαδιαίες επισκέψεις για καθαρισμό και συντήρηση",
-      feature2: "Επαγγελματικός έλεγχος εξοπλισμού",
-      feature3: "Πλήρης έλεγχος χημικής ισορροπίας",
-      feature4: "Εγγύηση κρυστάλλινου νερού",
-      extra1: "Παροχή χημικών προϊόντων",
-      extra2: "Υπηρεσία έκτακτης ανάγκης 24/7",
-      extra3: "Συντήρηση Κήπου – Ολοκληρωμένη φροντίδα εξωτερικών χώρων",
-      extra4: "Υπηρεσίες προσαρμοσμένες στις ανάγκες σας",
       ctaPrimary: "Ζητήστε δωρεάν εκτίμηση",
-      ctaSecondary: "Καλέστε τώρα"
+      ctaSecondary: "Καλέστε τώρα",
+      lite: {
+        name: "Lite",
+        visits: "2 επισκέψεις την εβδομάδα",
+        price: "180",
+        features: ["Εβδομαδιαίος καθαρισμός", "Έλεγχος χημικής ισορροπίας", "Βασική συντήρηση", "Υποστήριξη μέσω email"]
+      },
+      professional: {
+        name: "Professional",
+        visits: "4 επισκέψεις την εβδομάδα",
+        price: "220",
+        features: ["Τακτικός καθαρισμός & συντήρηση", "Επαγγελματικός έλεγχος εξοπλισμού", "Πλήρης έλεγχος χημικής ισορροπίας", "Εγγύηση κρυστάλλινου νερού", "Παροχή χημικών προϊόντων", "Υπηρεσία έκτακτης ανάγκης 24/7"]
+      },
+      premium: {
+        name: "Premium",
+        visits: "6 επισκέψεις την εβδομάδα",
+        price: "400",
+        features: ["Καθημερινός καθαρισμός & συντήρηση", "Επαγγελματικός έλεγχος εξοπλισμού", "Πλήρης έλεγχος χημικής ισορροπίας", "Εγγύηση κρυστάλλινου νερού", "Παροχή χημικών προϊόντων", "Υπηρεσία έκτακτης ανάγκης 24/7", "Συντήρηση κήπου", "Προτεραιότητα υποστήριξης"]
+      }
     },
     reviews: {
       title: "Τι λένε οι πελάτες μας",

@@ -10,18 +10,19 @@ const Pricing = () => {
     contactSection?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const basicFeatures = [
-    t.pricing.feature1,
-    t.pricing.feature2,
-    t.pricing.feature3,
-    t.pricing.feature4,
-  ];
-
-  const extraFeatures = [
-    t.pricing.extra1,
-    t.pricing.extra2,
-    t.pricing.extra3,
-    t.pricing.extra4,
+  const packages = [
+    {
+      key: "lite" as const,
+      popular: false,
+    },
+    {
+      key: "professional" as const,
+      popular: true,
+    },
+    {
+      key: "premium" as const,
+      popular: false,
+    },
   ];
 
   return (
@@ -39,82 +40,127 @@ const Pricing = () => {
           </p>
         </div>
 
-        <div className="max-w-xl mx-auto">
-          <div className="bg-card border border-border rounded-lg shadow-soft overflow-hidden">
-            {/* Header */}
-            <div className="bg-charcoal text-white p-8 sm:p-10 text-center">
-              <h3 className="text-2xl sm:text-3xl font-semibold mb-2 text-white">
-                {t.pricing.packageName}
-              </h3>
-              <div className="flex flex-col items-center gap-1 mt-6">
-                <span className="text-sm text-white/70">{t.pricing.fromOnly}</span>
-                <div className="flex items-baseline gap-2">
-                  <span className="text-5xl sm:text-6xl font-semibold text-primary">220€</span>
-                  <span className="text-lg text-white/80">/{t.pricing.perMonth}</span>
-                </div>
-              </div>
-              <p className="mt-4 text-white/60 text-sm max-w-sm mx-auto">
-                Η τελική τιμή εξαρτάται από το μέγεθος της πισίνας και τις επιλεγμένες υπηρεσίες
-              </p>
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
+          {packages.map((pkg) => {
+            const packageData = t.pricing[pkg.key];
+            const isPopular = pkg.popular;
 
-            {/* Features */}
-            <div className="p-8 sm:p-10">
-              <div className="mb-8">
-                <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-5">
-                  Βασικές υπηρεσίες
-                </h4>
-                <div className="space-y-4">
-                  {basicFeatures.map((feature, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <div className="bg-primary/10 rounded-full p-1 mt-0.5">
-                        <Check className="w-4 h-4 text-primary" />
-                      </div>
-                      <span className="text-foreground">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
+            return (
+              <div
+                key={pkg.key}
+                className={`relative bg-card border rounded-lg overflow-hidden transition-all duration-300 ${
+                  isPopular
+                    ? "border-primary shadow-gold scale-105 z-10"
+                    : "border-border shadow-soft hover:border-primary/30 hover:shadow-medium"
+                }`}
+              >
+                {/* Popular Badge */}
+                {isPopular && (
+                  <div className="absolute top-0 left-0 right-0 bg-primary text-primary-foreground text-center py-2 text-sm font-semibold">
+                    {t.pricing.badge}
+                  </div>
+                )}
 
-              <div className="mb-10 pt-6 border-t border-border">
-                <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-5">
-                  Επιπλέον υπηρεσίες
-                </h4>
-                <div className="space-y-4">
-                  {extraFeatures.map((feature, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <div className="bg-primary/10 rounded-full p-1 mt-0.5">
-                        <Check className="w-4 h-4 text-primary" />
-                      </div>
-                      <span className="text-foreground">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="space-y-3">
-                <Button
-                  onClick={scrollToContact}
-                  size="lg"
-                  className="w-full h-12 text-base font-semibold bg-primary hover:bg-primary/90 text-primary-foreground shadow-gold hover:shadow-elegant transition-all"
+                {/* Header */}
+                <div
+                  className={`p-6 sm:p-8 text-center ${
+                    isPopular ? "bg-charcoal text-white pt-12" : "bg-secondary/50"
+                  }`}
                 >
-                  {t.pricing.ctaPrimary}
-                </Button>
-                <Button
-                  asChild
-                  variant="outline"
-                  size="lg"
-                  className="w-full h-12 text-base border-border text-charcoal hover:bg-secondary"
-                >
-                  <a href="tel:+306987404210" className="flex items-center justify-center gap-2">
-                    <Phone className="w-4 h-4" />
-                    {t.pricing.ctaSecondary}
-                  </a>
-                </Button>
+                  <h3
+                    className={`text-xl sm:text-2xl font-semibold mb-2 ${
+                      isPopular ? "text-white" : "text-charcoal"
+                    }`}
+                  >
+                    {packageData.name}
+                  </h3>
+                  <p
+                    className={`text-sm mb-4 ${
+                      isPopular ? "text-white/70" : "text-muted-foreground"
+                    }`}
+                  >
+                    {packageData.visits}
+                  </p>
+                  <div className="flex flex-col items-center gap-1">
+                    <span
+                      className={`text-xs ${
+                        isPopular ? "text-white/60" : "text-muted-foreground"
+                      }`}
+                    >
+                      {t.pricing.fromOnly}
+                    </span>
+                    <div className="flex items-baseline gap-1">
+                      <span
+                        className={`text-4xl sm:text-5xl font-semibold ${
+                          isPopular ? "text-primary" : "text-charcoal"
+                        }`}
+                      >
+                        {packageData.price}€
+                      </span>
+                      <span
+                        className={`text-sm ${
+                          isPopular ? "text-white/70" : "text-muted-foreground"
+                        }`}
+                      >
+                        /{t.pricing.perMonth}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Features */}
+                <div className="p-6 sm:p-8">
+                  <div className="space-y-3 mb-8">
+                    {packageData.features.map((feature: string, index: number) => (
+                      <div key={index} className="flex items-start gap-3">
+                        <div
+                          className={`rounded-full p-1 mt-0.5 ${
+                            isPopular ? "bg-primary/20" : "bg-primary/10"
+                          }`}
+                        >
+                          <Check className="w-3 h-3 text-primary" />
+                        </div>
+                        <span className="text-sm text-foreground">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="space-y-3">
+                    <Button
+                      onClick={scrollToContact}
+                      size="lg"
+                      className={`w-full h-11 text-sm font-semibold transition-all ${
+                        isPopular
+                          ? "bg-primary hover:bg-primary/90 text-primary-foreground shadow-gold hover:shadow-elegant"
+                          : "bg-charcoal hover:bg-charcoal-light text-white"
+                      }`}
+                    >
+                      {t.pricing.ctaPrimary}
+                    </Button>
+                    <Button
+                      asChild
+                      variant="outline"
+                      size="lg"
+                      className="w-full h-11 text-sm border-border text-charcoal hover:bg-secondary"
+                    >
+                      <a
+                        href="tel:+306987404210"
+                        className="flex items-center justify-center gap-2"
+                      >
+                        <Phone className="w-4 h-4" />
+                        {t.pricing.ctaSecondary}
+                      </a>
+                    </Button>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
+
+        <p className="text-center text-sm text-muted-foreground mt-8">
+          {t.pricing.priceNote}
+        </p>
       </div>
     </section>
   );
