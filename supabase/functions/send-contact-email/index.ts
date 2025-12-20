@@ -62,18 +62,35 @@ const handler = async (req: Request): Promise<Response> => {
                      'unknown';
 
     // Check rate limit (3 submissions per hour per IP or email)
+    // Using separate queries to avoid filter injection via string interpolation
     const oneHourAgo = new Date(Date.now() - 60 * 60 * 1000).toISOString();
     
-    const { data: existingLimits, error: fetchError } = await supabase
+    // Query by IP address
+    const { data: ipLimit, error: ipFetchError } = await supabase
       .from('contact_rate_limits')
       .select('*')
-      .or(`ip_address.eq.${clientIP},email.eq.${email}`)
+      .eq('ip_address', clientIP)
       .gte('last_submission_at', oneHourAgo)
-      .single();
+      .maybeSingle();
 
-    if (fetchError && fetchError.code !== 'PGRST116') {
-      console.error('Rate limit check error:', fetchError);
+    if (ipFetchError) {
+      console.error('Rate limit check error (IP):', ipFetchError);
     }
+
+    // Query by email
+    const { data: emailLimit, error: emailFetchError } = await supabase
+      .from('contact_rate_limits')
+      .select('*')
+      .eq('email', email)
+      .gte('last_submission_at', oneHourAgo)
+      .maybeSingle();
+
+    if (emailFetchError) {
+      console.error('Rate limit check error (email):', emailFetchError);
+    }
+
+    // Use whichever limit exists (prioritize IP-based limit)
+    const existingLimits = ipLimit || emailLimit;
 
     if (existingLimits && existingLimits.submission_count >= 3) {
       return new Response(
