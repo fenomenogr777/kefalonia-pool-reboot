@@ -6,25 +6,23 @@ import Reviews from "@/components/Reviews";
 import Gallery from "@/components/Gallery";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import { LanguageProvider } from "@/contexts/LanguageContext";
 
 const Index = () => {
   return (
-    <LanguageProvider>
-      <div className="min-h-screen">
-        <Navigation />
-        <main>
-          <Hero />
-          <Pricing />
-          <WhyChooseUs />
-          <Gallery />
-          <Reviews />
-          <Contact />
-        </main>
-        <Footer />
-      </div>
-    </LanguageProvider>
+    <div className="min-h-screen">
+      <Navigation />
+      <main>
+        <Hero />
+        <Pricing />
+        <WhyChooseUs />
+        <Gallery />
+        <Reviews />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
   );
 };
 
 export default Index;
+
