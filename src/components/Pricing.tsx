@@ -179,7 +179,7 @@ const Pricing = () => {
                       size="lg"
                       className={`w-full h-12 text-base transition-all duration-300 hover:scale-[1.02] ${
                         isPopular
-                          ? "border-white/20 text-white hover:bg-white/10 hover:border-white/40"
+                          ? "border-white/30 bg-white/10 text-white hover:bg-white/20 hover:border-white/50"
                           : "border-border text-charcoal hover:bg-secondary hover:border-primary/30"
                       }`}
                     >
