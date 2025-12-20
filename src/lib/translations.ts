@@ -67,7 +67,7 @@ export const translations = {
         name: "Lite",
         visits: "2 visits per week",
         price: "180",
-        features: ["Weekly cleaning", "Chemical balance check", "Basic maintenance", "Email support"]
+        features: ["Regular cleaning & maintenance", "Professional equipment inspection", "Complete chemical balance control", "Guaranteed crystal clear water"]
       },
       professional: {
         name: "Professional",
@@ -253,7 +253,7 @@ export const translations = {
         name: "Lite",
         visits: "2 επισκέψεις την εβδομάδα",
         price: "180",
-        features: ["Εβδομαδιαίος καθαρισμός", "Έλεγχος χημικής ισορροπίας", "Βασική συντήρηση", "Υποστήριξη μέσω email"]
+        features: ["Τακτικός καθαρισμός & συντήρηση", "Επαγγελματικός έλεγχος εξοπλισμού", "Πλήρης έλεγχος χημικής ισορροπίας", "Εγγύηση κρυστάλλινου νερού"]
       },
       professional: {
         name: "Professional",
