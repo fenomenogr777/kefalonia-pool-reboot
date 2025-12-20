@@ -23,8 +23,23 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 
 export const useLanguage = () => {
   const context = useContext(LanguageContext);
+
+  // Defensive fallback: prevents a full blank-screen if a component renders outside the provider.
+  // This should not happen in normal app flow (provider is mounted in App.tsx).
   if (!context) {
-    throw new Error("useLanguage must be used within a LanguageProvider");
+    if (import.meta.env.DEV) {
+      // eslint-disable-next-line no-console
+      console.warn("useLanguage called outside LanguageProvider; falling back to default language");
+    }
+
+    const defaultLanguage: Language = "el";
+    return {
+      language: defaultLanguage,
+      setLanguage: () => {},
+      t: translations[defaultLanguage],
+    } satisfies LanguageContextType;
   }
+
   return context;
 };
+
