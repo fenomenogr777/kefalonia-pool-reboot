@@ -57,7 +57,8 @@ export const translations = {
     pricing: {
       title: "Pricing & packages",
       subtitle: "Simple, transparent, and affordable",
-      badge: "Most popular",
+      badge: "Pricing & packages",
+      popularBadge: "Guaranteed Quality",
       fromOnly: "From",
       perMonth: "month",
       priceNote: "*Final price depends on pool size and services",
@@ -243,7 +244,8 @@ export const translations = {
     pricing: {
       title: "Τιμές & πακέτα",
       subtitle: "Απλά, διαφανή και προσιτά",
-      badge: "Πιο δημοφιλές",
+      badge: "Τιμές & πακέτα",
+      popularBadge: "Εγγυημένη Ποιότητα",
       fromOnly: "Από",
       perMonth: "μήνα",
       priceNote: "*Η τελική τιμή εξαρτάται από το μέγεθος και τις υπηρεσίες",

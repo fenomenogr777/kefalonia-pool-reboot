@@ -68,7 +68,7 @@ const Pricing = () => {
                 {isPopular && (
                   <div className="absolute top-0 left-0 right-0 bg-primary text-primary-foreground text-center py-2.5 text-sm font-semibold flex items-center justify-center gap-2">
                     <Star className="w-4 h-4 fill-current" />
-                    {t.pricing.badge}
+                    {t.pricing.popularBadge}
                     <Star className="w-4 h-4 fill-current" />
                   </div>
                 )}
