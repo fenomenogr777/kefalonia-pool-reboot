@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Menu, X, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -8,28 +8,30 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useActiveSection } from "@/hooks/useActiveSection";
 
 const Navigation = () => {
   const { language, setLanguage, t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const navLinks = [
+  const navLinks = useMemo(() => [
     { label: t.nav.home, href: '#home' },
     { label: t.nav.pricing, href: '#pricing' },
     { label: t.nav.whyUs, href: '#why-choose-us' },
     { label: t.nav.gallery, href: '#gallery' },
     { label: t.nav.reviews, href: '#reviews' },
     { label: t.nav.contact, href: '#contact' },
-  ];
+  ], [t]);
+
+  const sectionIds = useMemo(() => navLinks.map(l => l.href), [navLinks]);
+  const activeSection = useActiveSection(sectionIds);
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
@@ -52,9 +54,7 @@ const Navigation = () => {
             onClick={() => scrollToSection('#home')}
             className="text-xl font-semibold hover:opacity-80 transition-opacity"
           >
-            <span className={`transition-colors ${isScrolled ? 'text-primary' : 'text-primary'}`}>
-              Clean Pool
-            </span>
+            <span className="text-primary">Clean Pool</span>
             <span className={`transition-colors ${isScrolled ? 'text-charcoal' : 'text-white'}`}>
               {" "}Kefalonia
             </span>
@@ -66,13 +66,17 @@ const Navigation = () => {
               <button
                 key={link.href}
                 onClick={() => scrollToSection(link.href)}
-                className={`text-sm font-medium transition-colors ${
+                className={`relative text-sm font-medium transition-colors py-1 ${
                   isScrolled 
                     ? 'text-charcoal-light hover:text-primary' 
                     : 'text-white/90 hover:text-white'
-                }`}
+                } ${activeSection === link.href ? (isScrolled ? '!text-primary' : '!text-white') : ''}`}
               >
                 {link.label}
+                {/* Active indicator */}
+                <span className={`absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full transition-all duration-300 ${
+                  activeSection === link.href ? 'scale-x-100 opacity-100' : 'scale-x-0 opacity-0'
+                }`} />
               </button>
             ))}
             
@@ -148,20 +152,26 @@ const Navigation = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden py-4 bg-background rounded-lg mb-4 shadow-soft border border-border">
+        {/* Mobile Menu with slide animation */}
+        <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+          isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        }`}>
+          <div className="py-4 bg-background rounded-lg mb-4 shadow-soft border border-border">
             {navLinks.map((link) => (
               <button
                 key={link.href}
                 onClick={() => scrollToSection(link.href)}
-                className="block w-full text-left px-6 py-3 text-sm font-medium text-charcoal hover:bg-secondary hover:text-primary transition-colors"
+                className={`block w-full text-left px-6 py-3 text-sm font-medium transition-colors ${
+                  activeSection === link.href
+                    ? 'text-primary bg-primary/5 border-l-2 border-primary'
+                    : 'text-charcoal hover:bg-secondary hover:text-primary'
+                }`}
               >
                 {link.label}
               </button>
             ))}
           </div>
-        )}
+        </div>
       </div>
     </nav>
   );
