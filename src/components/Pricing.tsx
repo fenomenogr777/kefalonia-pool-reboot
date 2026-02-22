@@ -13,18 +13,9 @@ const Pricing = () => {
   };
 
   const packages = [
-    {
-      key: "lite" as const,
-      popular: false,
-    },
-    {
-      key: "professional" as const,
-      popular: true,
-    },
-    {
-      key: "premium" as const,
-      popular: false,
-    },
+    { key: "lite" as const, popular: false },
+    { key: "professional" as const, popular: true },
+    { key: "premium" as const, popular: false },
   ];
 
   return (
@@ -53,20 +44,24 @@ const Pricing = () => {
             return (
               <div
                 key={pkg.key}
-                className={`relative flex flex-col rounded-2xl overflow-hidden transition-all duration-500 ${
+                className={`relative flex flex-col rounded-2xl overflow-hidden transition-all duration-500 group ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                 } ${
                   isPopular
-                    ? "bg-charcoal text-white shadow-elegant md:scale-105 z-10 ring-2 ring-primary"
-                    : "bg-card border border-border shadow-soft hover:shadow-medium hover:border-primary/30"
+                    ? "bg-charcoal text-white shadow-elegant md:scale-105 z-10"
+                    : "bg-card border border-border shadow-soft hover:shadow-elegant hover:-translate-y-1"
                 }`}
                 style={{
                   transitionDelay: isVisible ? `${index * 150}ms` : "0ms",
+                  ...(isPopular ? {
+                    background: 'linear-gradient(hsl(var(--charcoal)), hsl(var(--charcoal))) padding-box, linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)), hsl(var(--primary))) border-box',
+                    border: '2px solid transparent',
+                  } : {})
                 }}
               >
                 {/* Popular Badge */}
                 {isPopular && (
-                  <div className="absolute top-0 left-0 right-0 bg-primary text-primary-foreground text-center py-2.5 text-sm font-semibold flex items-center justify-center gap-2">
+                  <div className="absolute top-0 left-0 right-0 bg-gradient-gold text-primary-foreground text-center py-2.5 text-sm font-semibold flex items-center justify-center gap-2">
                     <Star className="w-4 h-4 fill-current" />
                     {t.pricing.popularBadge}
                     <Star className="w-4 h-4 fill-current" />
@@ -74,55 +69,23 @@ const Pricing = () => {
                 )}
 
                 {/* Header */}
-                <div
-                  className={`p-8 text-center ${
-                    isPopular ? "pt-14 pb-8" : "py-8 border-b border-border"
-                  }`}
-                >
-                  <h3
-                    className={`text-2xl font-semibold mb-2 ${
-                      isPopular ? "text-white" : "text-charcoal"
-                    }`}
-                  >
+                <div className={`p-8 text-center ${isPopular ? "pt-14 pb-8" : "py-8 border-b border-border"}`}>
+                  <h3 className={`text-2xl font-semibold mb-2 ${isPopular ? "text-white" : "text-charcoal"}`}>
                     {packageData.name}
                   </h3>
-                  <p
-                    className={`text-sm mb-6 ${
-                      isPopular ? "text-white/70" : "text-muted-foreground"
-                    }`}
-                  >
+                  <p className={`text-sm mb-6 ${isPopular ? "text-white/70" : "text-muted-foreground"}`}>
                     {packageData.visits}
                   </p>
                   <div className="flex flex-col items-center gap-1">
-                    <span
-                      className={`text-xs uppercase tracking-wider ${
-                        isPopular ? "text-white/50" : "text-muted-foreground"
-                      }`}
-                    >
+                    <span className={`text-xs uppercase tracking-wider ${isPopular ? "text-white/50" : "text-muted-foreground"}`}>
                       {t.pricing.fromOnly}
                     </span>
                     <div className="flex items-baseline gap-1">
-                      <span
-                        className={`text-5xl font-bold tracking-tight ${
-                          isPopular ? "text-primary" : "text-charcoal"
-                        }`}
-                      >
+                      <span className={`text-5xl font-bold tracking-tight ${isPopular ? "text-primary" : "text-charcoal"}`}>
                         {packageData.price}
                       </span>
-                      <span
-                        className={`text-xl font-medium ${
-                          isPopular ? "text-primary" : "text-charcoal"
-                        }`}
-                      >
-                        €
-                      </span>
-                      <span
-                        className={`text-sm ${
-                          isPopular ? "text-white/60" : "text-muted-foreground"
-                        }`}
-                      >
-                        /{t.pricing.perMonth}
-                      </span>
+                      <span className={`text-xl font-medium ${isPopular ? "text-primary" : "text-charcoal"}`}>€</span>
+                      <span className={`text-sm ${isPopular ? "text-white/60" : "text-muted-foreground"}`}>/{t.pricing.perMonth}</span>
                     </div>
                   </div>
                 </div>
@@ -136,22 +99,12 @@ const Pricing = () => {
                         className={`flex items-start gap-3 transition-all duration-300 ${
                           isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
                         }`}
-                        style={{
-                          transitionDelay: isVisible ? `${index * 150 + idx * 50 + 200}ms` : "0ms",
-                        }}
+                        style={{ transitionDelay: isVisible ? `${index * 150 + idx * 50 + 200}ms` : "0ms" }}
                       >
-                        <div
-                          className={`flex-shrink-0 rounded-full p-1 ${
-                            isPopular ? "bg-primary/20" : "bg-primary/10"
-                          }`}
-                        >
-                          <Check className={`w-4 h-4 ${isPopular ? "text-primary" : "text-primary"}`} />
+                        <div className={`flex-shrink-0 rounded-full p-1 transition-colors duration-300 ${isPopular ? "bg-primary/20" : "bg-primary/10 group-hover:bg-primary/20"}`}>
+                          <Check className="w-4 h-4 text-primary" />
                         </div>
-                        <span
-                          className={`text-sm leading-relaxed ${
-                            isPopular ? "text-white/90" : "text-foreground"
-                          }`}
-                        >
+                        <span className={`text-sm leading-relaxed ${isPopular ? "text-white/90" : "text-foreground"}`}>
                           {feature}
                         </span>
                       </div>
@@ -183,10 +136,7 @@ const Pricing = () => {
                           : "border-border text-charcoal hover:bg-secondary hover:border-primary/30"
                       }`}
                     >
-                      <a
-                        href="tel:+306987404210"
-                        className="flex items-center justify-center gap-2"
-                      >
+                      <a href="tel:+306987404210" className="flex items-center justify-center gap-2">
                         <Phone className="w-4 h-4" />
                         {t.pricing.ctaSecondary}
                       </a>

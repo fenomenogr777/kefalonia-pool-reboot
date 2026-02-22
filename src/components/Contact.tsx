@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Phone, Mail, Facebook, Instagram } from "lucide-react";
+import { Phone, Mail, Facebook, Instagram, CheckCircle } from "lucide-react";
 import { toast } from "sonner";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { supabase } from "@/integrations/supabase/client";
@@ -15,8 +13,59 @@ const contactSchema = z.object({
   message: z.string().trim().min(1, "Το μήνυμα είναι υποχρεωτικό").max(2000, "Το μήνυμα πρέπει να είναι μικρότερο από 2000 χαρακτήρες")
 });
 
+const FloatingInput = ({ 
+  id, name, type = "text", value, onChange, label, required 
+}: { 
+  id: string; name: string; type?: string; value: string; onChange: (e: React.ChangeEvent<HTMLInputElement>) => void; label: string; required?: boolean;
+}) => (
+  <div className="relative">
+    <input
+      id={id}
+      name={name}
+      type={type}
+      value={value}
+      onChange={onChange}
+      required={required}
+      placeholder=" "
+      className="peer w-full h-12 px-4 pt-4 pb-1 text-sm border border-border rounded-lg bg-background text-foreground outline-none transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/20"
+    />
+    <label
+      htmlFor={id}
+      className="absolute left-4 top-1/2 -translate-y-1/2 text-sm text-muted-foreground transition-all duration-200 pointer-events-none peer-focus:top-3 peer-focus:text-xs peer-focus:text-primary peer-[:not(:placeholder-shown)]:top-3 peer-[:not(:placeholder-shown)]:text-xs"
+    >
+      {label} {required && '*'}
+    </label>
+  </div>
+);
+
+const FloatingTextarea = ({ 
+  id, name, value, onChange, label, required, rows = 4 
+}: { 
+  id: string; name: string; value: string; onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void; label: string; required?: boolean; rows?: number;
+}) => (
+  <div className="relative">
+    <textarea
+      id={id}
+      name={name}
+      value={value}
+      onChange={onChange}
+      required={required}
+      rows={rows}
+      placeholder=" "
+      className="peer w-full px-4 pt-6 pb-2 text-sm border border-border rounded-lg bg-background text-foreground outline-none resize-none transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/20"
+    />
+    <label
+      htmlFor={id}
+      className="absolute left-4 top-4 text-sm text-muted-foreground transition-all duration-200 pointer-events-none peer-focus:top-2 peer-focus:text-xs peer-focus:text-primary peer-[:not(:placeholder-shown)]:top-2 peer-[:not(:placeholder-shown)]:text-xs"
+    >
+      {label} {required && '*'}
+    </label>
+  </div>
+);
+
 const Contact = () => {
   const { t } = useLanguage();
+  const [isSuccess, setIsSuccess] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -36,8 +85,10 @@ const Contact = () => {
 
       if (error) throw error;
 
+      setIsSuccess(true);
       toast.success(t.contact.form.success);
       setFormData({ name: "", phone: "", email: "", message: "" });
+      setTimeout(() => setIsSuccess(false), 4000);
     } catch (error) {
       console.error('Error sending email:', error);
       if (error instanceof z.ZodError) {
@@ -73,7 +124,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 max-w-5xl mx-auto">
           {/* Contact Information */}
           <div className="space-y-6 order-2 md:order-1">
-            <div className="p-6 border border-border rounded-lg hover:border-primary/30 transition-colors">
+            <div className="p-6 border border-border rounded-lg hover:border-primary/30 hover:shadow-soft transition-all duration-300">
               <div className="flex items-center gap-4">
                 <div className="bg-primary/10 rounded-lg p-3">
                   <Phone className="h-5 w-5 text-primary" />
@@ -90,7 +141,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="p-6 border border-border rounded-lg hover:border-primary/30 transition-colors">
+            <div className="p-6 border border-border rounded-lg hover:border-primary/30 hover:shadow-soft transition-all duration-300">
               <div className="flex items-center gap-4">
                 <div className="bg-primary/10 rounded-lg p-3">
                   <Mail className="h-5 w-5 text-primary" />
@@ -114,7 +165,7 @@ const Contact = () => {
                   href="https://www.facebook.com/cleanpoolkefalonia"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-charcoal text-white rounded-lg p-3 hover:bg-primary transition-colors"
+                  className="bg-charcoal text-white rounded-lg p-3 hover:bg-primary transition-all duration-300 hover:scale-105"
                 >
                   <Facebook className="h-5 w-5" />
                 </a>
@@ -122,7 +173,7 @@ const Contact = () => {
                   href="https://www.instagram.com/cleanpoolkefalonia/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-charcoal text-white rounded-lg p-3 hover:bg-primary transition-colors"
+                  className="bg-charcoal text-white rounded-lg p-3 hover:bg-primary transition-all duration-300 hover:scale-105"
                 >
                   <Instagram className="h-5 w-5" />
                 </a>
@@ -130,7 +181,7 @@ const Contact = () => {
                   href="https://www.tiktok.com/@cleanpoolkefalonia"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-charcoal text-white rounded-lg p-3 hover:bg-primary transition-colors"
+                  className="bg-charcoal text-white rounded-lg p-3 hover:bg-primary transition-all duration-300 hover:scale-105"
                 >
                   <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
@@ -141,79 +192,57 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="border border-border rounded-lg p-6 sm:p-8 order-1 md:order-2">
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-charcoal mb-2">
-                  {t.contact.form.name} *
-                </label>
-                <Input
+          <div className="border border-border rounded-lg p-6 sm:p-8 order-1 md:order-2 hover:shadow-soft transition-shadow duration-300">
+            {isSuccess ? (
+              <div className="flex flex-col items-center justify-center h-full py-12 animate-scale-in">
+                <CheckCircle className="w-16 h-16 text-primary mb-4" />
+                <p className="text-lg font-semibold text-charcoal text-center">{t.contact.form.success}</p>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <FloatingInput
                   id="name"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
+                  label={t.contact.form.name}
                   required
-                  className="w-full h-11 border-border focus:border-primary"
-                  placeholder={t.contact.form.namePlaceholder}
                 />
-              </div>
-
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-charcoal mb-2">
-                  {t.contact.form.phone} *
-                </label>
-                <Input
+                <FloatingInput
                   id="phone"
                   name="phone"
                   type="tel"
                   value={formData.phone}
                   onChange={handleChange}
+                  label={t.contact.form.phone}
                   required
-                  className="w-full h-11 border-border focus:border-primary"
-                  placeholder={t.contact.form.phonePlaceholder}
                 />
-              </div>
-
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-charcoal mb-2">
-                  {t.contact.form.email} *
-                </label>
-                <Input
+                <FloatingInput
                   id="email"
                   name="email"
                   type="email"
                   value={formData.email}
                   onChange={handleChange}
+                  label={t.contact.form.email}
                   required
-                  className="w-full h-11 border-border focus:border-primary"
-                  placeholder={t.contact.form.emailPlaceholder}
                 />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-charcoal mb-2">
-                  {t.contact.form.message} *
-                </label>
-                <Textarea
+                <FloatingTextarea
                   id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
+                  label={t.contact.form.message}
                   required
-                  rows={4}
-                  className="w-full resize-none border-border focus:border-primary"
-                  placeholder={t.contact.form.messagePlaceholder}
                 />
-              </div>
-
-              <Button 
-                type="submit" 
-                size="lg"
-                className="w-full h-12 text-base font-semibold bg-primary hover:bg-primary/90 text-primary-foreground shadow-gold hover:shadow-elegant transition-all"
-              >
-                {t.contact.form.submit}
-              </Button>
-            </form>
+                <Button 
+                  type="submit" 
+                  size="lg"
+                  className="w-full h-12 text-base font-semibold bg-primary hover:bg-primary/90 text-primary-foreground shadow-gold hover:shadow-elegant transition-all duration-300 hover:scale-[1.01]"
+                >
+                  {t.contact.form.submit}
+                </Button>
+              </form>
+            )}
           </div>
         </div>
       </div>

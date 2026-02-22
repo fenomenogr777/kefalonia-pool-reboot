@@ -1,41 +1,65 @@
-import { Star } from "lucide-react";
+import { Star, Quote } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Reviews = () => {
   const { t } = useLanguage();
+  const { ref, isVisible } = useScrollAnimation(0.1);
 
   const googleReviewsUrl = "https://www.google.com/maps/place/Clean+Pool+Kefalonia+%E2%80%93+%CE%A3%CF%85%CE%BD%CF%84%CE%AE%CF%81%CE%B7%CF%83%CE%B7+%26+%CE%9A%CE%B1%CE%B8%CE%B1%CF%81%CE%B9%CF%83%CE%BC%CF%8C%CF%82+%CE%A0%CE%B9%CF%83%CE%AF%CE%BD%CE%B1%CF%82/@38.2662511,20.4115987,54612m/data=!3m1!1e3!4m14!1m5!8m4!1e1!2s116236589460706263358!3m1!1e1!3m7!1s0xab644146e42a63b:0xc4a74dc9b3ca0ae9!8m2!3d38.2660968!4d20.576406!9m1!1b1!16s%2Fg%2F11wjk5w_qv?hl=el&entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D";
 
+  // Get first review as featured testimonial
+  const featuredReview = t.reviews.reviews?.[0];
+
   return (
     <section id="reviews" className="py-24 sm:py-32 bg-secondary/30">
-      <div className="container mx-auto px-6">
+      <div ref={ref} className="container mx-auto px-6">
         <a 
           href={googleReviewsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="block max-w-2xl mx-auto text-center group"
+          className="block max-w-3xl mx-auto text-center group"
         >
-          {/* Stars */}
-          <div className="inline-flex items-center gap-3 mb-8">
+          {/* Stars with staggered animation */}
+          <div className="inline-flex items-center gap-4 mb-8">
             <div className="flex gap-1">
               {[...Array(5)].map((_, i) => (
                 <Star 
                   key={i} 
-                  className="w-6 h-6 fill-primary text-primary group-hover:scale-110 transition-transform" 
-                  style={{ transitionDelay: `${i * 50}ms` }} 
+                  className={`w-7 h-7 fill-primary text-primary transition-all duration-500 group-hover:scale-110 ${
+                    isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
+                  }`}
+                  style={{ transitionDelay: `${i * 100}ms` }} 
                 />
               ))}
             </div>
-            <span className="text-2xl font-semibold text-charcoal">5.0</span>
+            <span className={`text-4xl font-bold text-charcoal transition-all duration-500 ${
+              isVisible ? 'opacity-100' : 'opacity-0'
+            }`} style={{ transitionDelay: '500ms' }}>
+              5.0
+            </span>
           </div>
           
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-charcoal mb-4 group-hover:text-primary transition-colors">
             {t.reviews.title}
           </h2>
           
-          <p className="text-lg text-muted-foreground max-w-lg mx-auto mb-8">
+          <p className="text-lg text-muted-foreground max-w-lg mx-auto mb-10">
             {t.reviews.subtitle}
           </p>
+
+          {/* Featured Testimonial */}
+          {featuredReview && (
+            <div className={`relative bg-background rounded-2xl p-8 mb-10 shadow-soft border border-border group-hover:shadow-medium group-hover:border-primary/20 transition-all duration-300 ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+            }`} style={{ transitionDelay: '300ms' }}>
+              <Quote className="w-8 h-8 text-primary/30 absolute top-6 left-6" />
+              <p className="text-foreground/80 italic text-base sm:text-lg leading-relaxed mb-4 px-4">
+                "{featuredReview.text}"
+              </p>
+              <p className="text-sm font-semibold text-charcoal">— {featuredReview.author}</p>
+            </div>
+          )}
           
           {/* Google Reviews Link */}
           <div className="inline-flex items-center gap-3 text-sm font-semibold text-charcoal border border-border px-6 py-3 rounded-full group-hover:border-primary/50 group-hover:bg-primary/5 transition-all duration-300">
